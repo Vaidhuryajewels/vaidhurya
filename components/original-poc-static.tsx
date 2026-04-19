@@ -83,6 +83,15 @@ function SearchGlyph() {
   );
 }
 
+function WhatsappGlyph() {
+  return (
+    <svg className={styles.whatsappIcon} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M20 11.56a8.02 8.02 0 0 1-11.86 7.05L4 20l1.47-4.02A8 8 0 1 1 20 11.56Z" />
+      <path d="M9.32 7.9c.2-.44.42-.45.63-.46h.42c.14 0 .36.03.56.47.19.44.66 1.53.72 1.65.06.13.1.29.02.46-.08.17-.13.28-.25.42-.12.14-.25.31-.36.42-.12.13-.25.27-.1.52.14.25.65 1.08 1.4 1.75.96.86 1.77 1.14 2.02 1.27.25.13.4.11.54-.07.15-.18.63-.73.8-.98.17-.25.34-.21.57-.12.24.08 1.49.7 1.75.82.25.13.42.19.48.29.06.11.06.63-.15 1.22-.21.59-1.22 1.16-1.69 1.23-.46.07-1.04.11-1.68-.1-.39-.13-.9-.3-1.55-.58-2.71-1.18-4.47-4.09-4.61-4.28-.14-.19-1.1-1.47-1.1-2.81 0-1.34.7-2 1-2.27Z" />
+    </svg>
+  );
+}
+
 const BRIDAL_NAV_ITEMS: NavItem[] = [
   { href: "#brides-collection", label: "Bride's Collection" },
   { href: "#grooms-collection", label: "Groom's Collection" },
@@ -336,7 +345,6 @@ function buildEverydayCategories(): CategoryItem[] {
 
 function buildEverydayProducts(): ProductPreview[] {
   return [
-    ...getProductsForTheme("everyday").map(buildPreviewFromProduct),
     {
       key: "poc-nose-pin",
       productHref: "#nose-pin",
@@ -345,6 +353,7 @@ function buildEverydayProducts(): ProductPreview[] {
       imageSrc: "/everyday-nose-pin.png",
       price: "₹321",
     },
+    ...getProductsForTheme("everyday").map(buildPreviewFromProduct),
   ];
 }
 
@@ -399,6 +408,7 @@ function PreviewCard({
 }: {
   item: ProductPreview;
 }) {
+  const productAnchor = `product-${item.key}`;
   const primaryImageScale = item.imageScale ?? 1;
   const hoverImageSrc = item.hoverImageSrc ?? item.imageSrc;
   const hoverImagePosition = item.hoverImagePosition ?? item.imagePosition;
@@ -408,12 +418,15 @@ function PreviewCard({
     "--product-base-scale": String(primaryImageScale),
     "--product-hover-scale": String(hoverImageScale ?? primaryImageScale),
   } as CSSProperties;
+  const productPageLink = `/poc#${productAnchor}`;
   const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    `Hello VAIDHURYA, I'm interested in ${item.name}.`,
+    `Hello VAIDHURYA, I'm interested in ${item.name}.
+Value: ${item.price}
+Page link: ${productPageLink}`,
   )}`;
 
   return (
-    <article className={styles.productCard}>
+    <article className={styles.productCard} id={productAnchor}>
       <Link className={styles.productMedia} href={item.productHref}>
         <Image
           className={`${styles.productImage} ${styles.productPrimaryHidden}`}
@@ -453,7 +466,8 @@ function PreviewCard({
           target="_blank"
           rel="noreferrer"
         >
-          WhatsApp
+          <WhatsappGlyph />
+          <span>Order now</span>
         </a>
       </div>
     </article>

@@ -1,5 +1,5 @@
-import { StorefrontHome } from "@/components/storefront-home";
+import { OriginalPocStatic } from "@/components/original-poc-static";
 
 export default function HomePage() {
-  return <StorefrontHome />;
+  return <OriginalPocStatic />;
 }

@@ -74,6 +74,11 @@ test("poc route preserves the bridal page and restores the everyday switch", { t
     browser = await chromium.launch({ headless: true });
     const page = await browser.newPage();
 
+    await page.goto(baseUrl);
+    await page.getByText("VAIDHURYA", { exact: true }).waitFor();
+    assert.equal(await page.locator("[data-poc-theme]").getAttribute("data-poc-theme"), "bridal");
+    assert.equal(await page.getByText("Chandraharam Mangalasutra", { exact: true }).isVisible(), true);
+
     await page.goto(`${baseUrl}/poc`);
     await page.getByText("VAIDHURYA", { exact: true }).waitFor();
 
@@ -98,9 +103,12 @@ test("poc route preserves the bridal page and restores the everyday switch", { t
     assert.equal(await secondBridalCard.getByText("42,895/-", { exact: true }).isVisible(), true);
     assert.equal(await thirdBridalCard.getByText("17,069/-", { exact: true }).isVisible(), true);
     assert.equal(await page.getByRole("button", { name: "Add to Cart" }).count(), 0);
-    const firstWhatsappLink = firstBridalCard.getByRole("link", { name: "WhatsApp" });
+    const firstWhatsappLink = firstBridalCard.getByRole("link", { name: "Order now" });
     assert.equal(await firstWhatsappLink.isVisible(), true);
-    assert.match((await firstWhatsappLink.getAttribute("href")) ?? "", /wa\.me\/917026651789/);
+    const firstWhatsappHref = (await firstWhatsappLink.getAttribute("href")) ?? "";
+    assert.match(firstWhatsappHref, /wa\.me\/917026651789/);
+    assert.match(firstWhatsappHref, /Value%3A%2023%2C793%2F-/);
+    assert.match(firstWhatsappHref, /%2Fpoc%23product-chandraharam/);
     const firstBridalCardWidth = await firstBridalCard.evaluate((element) => element.getBoundingClientRect().width);
     assert.equal(firstBridalCardWidth, 320);
 
@@ -112,28 +120,28 @@ test("poc route preserves the bridal page and restores the everyday switch", { t
 
     await everydayTab.click();
     await page.getByText("GRAND LAUNCH", { exact: true }).waitFor();
-    await page.getByText("Celestial Cuff Bracelet", { exact: true }).waitFor();
+    await page.getByText("Nose Pin", { exact: true }).waitFor();
     const firstEverydayCard = page.locator('[data-poc-theme="everyday"] article').first();
     const secondEverydayCard = page.locator('[data-poc-theme="everyday"] article').nth(1);
     const thirdEverydayCard = page.locator('[data-poc-theme="everyday"] article').nth(2);
     const fourthEverydayCard = page.locator('[data-poc-theme="everyday"] article').nth(3);
-    assert.equal(await firstEverydayCard.getByText("₹2,299", { exact: true }).isVisible(), true);
-    await firstEverydayCard.hover();
+    assert.equal(await firstEverydayCard.getByText("Nose Pin", { exact: true }).isVisible(), true);
+    assert.equal(await firstEverydayCard.getByText("₹321", { exact: true }).isVisible(), true);
+    assert.equal(await firstEverydayCard.getByText(/Wt:/i).count(), 0);
+    await secondEverydayCard.hover();
     await page.waitForTimeout(250);
-    const firstEverydayHoverStyle = await firstEverydayCard.locator("img").nth(1).evaluate((element) => {
+    const firstEverydayHoverStyle = await secondEverydayCard.locator("img").nth(1).evaluate((element) => {
       const styles = window.getComputedStyle(element);
       return {
         transform: styles.transform,
       };
     });
     assert.notEqual(firstEverydayHoverStyle.transform, "none");
-    assert.equal(await secondEverydayCard.getByText("₹3,000", { exact: true }).isVisible(), true);
-    assert.equal(await thirdEverydayCard.getByText("₹2,500", { exact: true }).isVisible(), true);
-    assert.equal(await fourthEverydayCard.getByText("Nose Pin", { exact: true }).isVisible(), true);
-    assert.equal(await fourthEverydayCard.getByText("₹321", { exact: true }).isVisible(), true);
-    assert.equal(await fourthEverydayCard.getByText(/Wt:/i).count(), 0);
-    assert.equal(await secondEverydayCard.getByText("Sold Out", { exact: true }).isVisible(), true);
+    assert.equal(await secondEverydayCard.getByText("₹2,299", { exact: true }).isVisible(), true);
+    assert.equal(await thirdEverydayCard.getByText("₹3,000", { exact: true }).isVisible(), true);
+    assert.equal(await fourthEverydayCard.getByText("₹2,500", { exact: true }).isVisible(), true);
     assert.equal(await thirdEverydayCard.getByText("Sold Out", { exact: true }).isVisible(), true);
+    assert.equal(await fourthEverydayCard.getByText("Sold Out", { exact: true }).isVisible(), true);
     assert.equal(await page.locator("[data-poc-theme]").getAttribute("data-poc-theme"), "everyday");
     const everydayHeaderBackground = await page.locator("header").evaluate((element) => {
       return window.getComputedStyle(element).backgroundImage;
