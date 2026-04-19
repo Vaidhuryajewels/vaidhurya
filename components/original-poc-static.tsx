@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import type { CSSProperties } from "react";
 import { useEffect, useRef, useState } from "react";
-import { useCart } from "@/components/cart-provider";
 import {
   collections,
   computePriceForVariant,
@@ -396,11 +396,18 @@ const THEME_CONTENT: Record<ThemeKey, ThemeContent> = {
 
 function PreviewCard({
   item,
-  onAddToCart,
 }: {
   item: ProductPreview;
-  onAddToCart: (variantId: string) => void;
 }) {
+  const primaryImageScale = item.imageScale ?? 1;
+  const hoverImageSrc = item.hoverImageSrc ?? item.imageSrc;
+  const hoverImagePosition = item.hoverImagePosition ?? item.imagePosition;
+  const hoverImageScale = item.hoverImageScale ?? (item.hoverImageSrc ? item.imageScale : primaryImageScale * 1.2);
+  const hoverImageStyle = {
+    objectPosition: hoverImagePosition,
+    "--product-base-scale": String(primaryImageScale),
+    "--product-hover-scale": String(hoverImageScale ?? primaryImageScale),
+  } as CSSProperties;
   const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
     `Hello VAIDHURYA, I'm interested in ${item.name}.`,
   )}`;
@@ -419,19 +426,14 @@ function PreviewCard({
             transform: item.imageScale ? `scale(${item.imageScale})` : undefined,
           }}
         />
-        {item.hoverImageSrc ? (
-          <Image
-            className={`${styles.productImage} ${styles.productHoverVisible}`}
-            src={item.hoverImageSrc}
-            alt=""
-            fill
-            sizes="(max-width: 840px) 32vw, 28vw"
-            style={{
-              objectPosition: item.hoverImagePosition,
-              transform: item.hoverImageScale ? `scale(${item.hoverImageScale})` : undefined,
-            }}
-          />
-        ) : null}
+        <Image
+          className={`${styles.productImage} ${styles.productHoverVisible}`}
+          src={hoverImageSrc}
+          alt=""
+          fill
+          sizes="(max-width: 840px) 32vw, 28vw"
+          style={hoverImageStyle}
+        />
         {item.imagePriceTag ? <span className={styles.productImageTag}>{item.imagePriceTag}</span> : null}
         {item.mediaBadge ? <span className={styles.productMediaBadge}>{item.mediaBadge}</span> : null}
       </Link>
@@ -445,30 +447,20 @@ function PreviewCard({
           </div>
         ) : null}
         {item.weight ? <div className={styles.productWeight}>{item.weight}</div> : null}
-        <div className={styles.productActions}>
-          <button
-            className={styles.productButton}
-            type="button"
-            onClick={() => onAddToCart(item.variantId)}
-          >
-            Add to Cart
-          </button>
-          <a
-            className={styles.productWhatsappButton}
-            href={whatsappHref}
-            target="_blank"
-            rel="noreferrer"
-          >
-            WhatsApp
-          </a>
-        </div>
+        <a
+          className={styles.productWhatsappButton}
+          href={whatsappHref}
+          target="_blank"
+          rel="noreferrer"
+        >
+          WhatsApp
+        </a>
       </div>
     </article>
   );
 }
 
 export function OriginalPocStatic() {
-  const { addItem } = useCart();
   const [theme, setTheme] = useState<ThemeKey>("bridal");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const categoryCarouselRef = useRef<HTMLDivElement | null>(null);
@@ -685,7 +677,7 @@ export function OriginalPocStatic() {
 
           <div className={styles.productGrid}>
             {content.products.map((item) => (
-              <PreviewCard item={item} key={item.key} onAddToCart={(variantId) => addItem(variantId, 1, false)} />
+              <PreviewCard item={item} key={item.key} />
             ))}
           </div>
         </section>
@@ -699,7 +691,7 @@ export function OriginalPocStatic() {
 
             <div className={styles.singleCardRow}>
               {content.secondarySection.products.map((item) => (
-                <PreviewCard item={item} key={item.key} onAddToCart={(variantId) => addItem(variantId, 1, false)} />
+                <PreviewCard item={item} key={item.key} />
               ))}
             </div>
           </section>

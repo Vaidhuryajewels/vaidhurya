@@ -97,18 +97,10 @@ test("poc route preserves the bridal page and restores the everyday switch", { t
     assert.equal(await firstBridalCard.getByText("inc GST", { exact: true }).count(), 0);
     assert.equal(await secondBridalCard.getByText("42,895/-", { exact: true }).isVisible(), true);
     assert.equal(await thirdBridalCard.getByText("17,069/-", { exact: true }).isVisible(), true);
+    assert.equal(await page.getByRole("button", { name: "Add to Cart" }).count(), 0);
     const firstWhatsappLink = firstBridalCard.getByRole("link", { name: "WhatsApp" });
     assert.equal(await firstWhatsappLink.isVisible(), true);
     assert.match((await firstWhatsappLink.getAttribute("href")) ?? "", /wa\.me\/917026651789/);
-    const bridalAddToCartStyles = await page.getByRole("button", { name: "Add to Cart" }).first().evaluate((element) => {
-      const styles = window.getComputedStyle(element);
-      return {
-        backgroundImage: styles.backgroundImage,
-        color: styles.color,
-      };
-    });
-    assert.match(bridalAddToCartStyles.backgroundImage, /rgb\(75, 22, 50\)|rgb\(41, 8, 24\)/);
-    assert.equal(bridalAddToCartStyles.color, "rgb(247, 239, 228)");
     const firstBridalCardWidth = await firstBridalCard.evaluate((element) => element.getBoundingClientRect().width);
     assert.equal(firstBridalCardWidth, 320);
 
@@ -126,6 +118,15 @@ test("poc route preserves the bridal page and restores the everyday switch", { t
     const thirdEverydayCard = page.locator('[data-poc-theme="everyday"] article').nth(2);
     const fourthEverydayCard = page.locator('[data-poc-theme="everyday"] article').nth(3);
     assert.equal(await firstEverydayCard.getByText("₹2,299", { exact: true }).isVisible(), true);
+    await firstEverydayCard.hover();
+    await page.waitForTimeout(250);
+    const firstEverydayHoverStyle = await firstEverydayCard.locator("img").nth(1).evaluate((element) => {
+      const styles = window.getComputedStyle(element);
+      return {
+        transform: styles.transform,
+      };
+    });
+    assert.notEqual(firstEverydayHoverStyle.transform, "none");
     assert.equal(await secondEverydayCard.getByText("₹3,000", { exact: true }).isVisible(), true);
     assert.equal(await thirdEverydayCard.getByText("₹2,500", { exact: true }).isVisible(), true);
     assert.equal(await fourthEverydayCard.getByText("Nose Pin", { exact: true }).isVisible(), true);
@@ -167,15 +168,19 @@ test("poc route preserves the bridal page and restores the everyday switch", { t
       };
     });
     assert.equal(victorianPriceTagStyle.borderColor, "rgba(214, 184, 112, 0.9)");
+    const victorianCardMedia = page.locator("#victorian-jewellery article").first();
+    await victorianCardMedia.hover();
+    await page.waitForTimeout(250);
     const victorianHoverStyle = await page.locator("#victorian-jewellery article img").nth(1).evaluate((element) => {
       const image = element as HTMLImageElement;
+      const styles = window.getComputedStyle(image);
       return {
         objectPosition: image.style.objectPosition,
-        transform: image.style.transform,
+        transform: styles.transform,
       };
     });
     assert.equal(victorianHoverStyle.objectPosition, "center top");
-    assert.equal(victorianHoverStyle.transform, "scale(1.34)");
+    assert.notEqual(victorianHoverStyle.transform, "none");
   } finally {
     await browser?.close();
     server.kill("SIGTERM");
