@@ -1,0 +1,348 @@
+.page {
+  min-height: 100vh;
+  padding: 16px 0 56px;
+  background:
+    radial-gradient(circle at top left, rgba(198, 164, 92, 0.14), transparent 24%),
+    radial-gradient(circle at 80% 8%, rgba(142, 27, 47, 0.08), transparent 18%),
+    linear-gradient(180deg, #f7efe6 0%, #f1e3d2 48%, #e8d9c5 100%);
+  color: #32111f;
+}
+
+.topRail {
+  width: min(1180px, calc(100vw - 28px));
+  margin: 0 auto 6px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
+
+.chip {
+  padding: 4px 10px;
+  border: 1px solid rgba(92, 44, 60, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: rgba(59, 15, 43, 0.8);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.shell {
+  width: min(1180px, calc(100vw - 28px));
+  margin: 0 auto;
+}
+
+.navRow {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+  margin-bottom: 10px;
+}
+
+.topNav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 18px;
+}
+
+.topNav a {
+  color: rgba(49, 14, 29, 0.84);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.modeToggle {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: min(330px, 100%);
+  padding: 4px;
+  border: 1px solid rgba(103, 58, 78, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 12px 24px rgba(65, 27, 43, 0.08);
+}
+
+.modeButton {
+  min-height: 34px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: rgba(59, 15, 43, 0.75);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.modeButtonActive {
+  background: linear-gradient(135deg, #603049, #3b0f2b);
+  color: #f5ede3;
+}
+
+.poster {
+  position: relative;
+  overflow: hidden;
+  min-height: clamp(200px, 26vw, 290px);
+  margin-bottom: 34px;
+  padding: clamp(24px, 4vw, 38px);
+  border: 2px solid rgba(88, 29, 55, 0.58);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 62% 18%, rgba(149, 96, 117, 0.18), transparent 18%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03), transparent 45%),
+    linear-gradient(180deg, #290818, #210612);
+  box-shadow: 0 18px 40px rgba(22, 4, 12, 0.22);
+  text-align: center;
+}
+
+.posterBrand {
+  margin: 0;
+  color: #f5ede3;
+  font-family: var(--font-serif), serif;
+  font-size: clamp(2.1rem, 5.4vw, 4.5rem);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+
+.posterMaterial {
+  margin: 10px 0 0;
+  color: rgba(233, 218, 197, 0.9);
+  font-size: clamp(0.72rem, 1.1vw, 1rem);
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+}
+
+.posterOccasion {
+  margin: 22px 0 0;
+  color: rgba(198, 164, 92, 0.88);
+  font-size: clamp(0.62rem, 1vw, 0.86rem);
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.posterDivider {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin: 10px 0 0;
+  color: #e7d9c5;
+  font-size: clamp(0.58rem, 0.95vw, 0.82rem);
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.posterDivider::before,
+.posterDivider::after {
+  content: "";
+  width: clamp(48px, 8vw, 86px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(198, 164, 92, 0.78), transparent);
+}
+
+.posterDate {
+  margin: 10px 0 0;
+  color: rgba(245, 237, 227, 0.92);
+  font-size: clamp(0.62rem, 1vw, 0.88rem);
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.section {
+  margin-bottom: 28px;
+}
+
+.sectionHeading {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.sectionKicker {
+  margin: 0 0 6px;
+  color: rgba(114, 78, 58, 0.68);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.sectionTitle {
+  margin: 0;
+  color: #4a2536;
+  font-family: var(--font-serif), serif;
+  font-size: clamp(2rem, 4.2vw, 3.4rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.categoryCard {
+  display: grid;
+  gap: 8px;
+}
+
+.categoryMedia {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 0.78;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: 0 12px 24px rgba(70, 35, 45, 0.09);
+}
+
+.categoryImage {
+  object-fit: cover;
+}
+
+.categoryLabel {
+  color: #381725;
+  font-size: 0.84rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.productCard {
+  display: grid;
+  grid-template-rows: auto auto;
+  overflow: hidden;
+  border-radius: 20px;
+  background: rgba(255, 251, 246, 0.85);
+  box-shadow: 0 14px 30px rgba(70, 35, 45, 0.1);
+}
+
+.productMedia {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 0.78;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(245, 237, 227, 0.9));
+}
+
+.productImage {
+  object-fit: cover;
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.productCard:hover .productPrimaryHidden {
+  opacity: 0;
+}
+
+.productCard:hover .productHoverVisible {
+  opacity: 1;
+}
+
+.productPrimaryHidden {
+  opacity: 1;
+}
+
+.productHoverVisible {
+  opacity: 0;
+}
+
+.productCopy {
+  display: grid;
+  gap: 8px;
+  padding: 10px 12px 12px;
+}
+
+.productName {
+  color: #381725;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.productPrice {
+  color: #381725;
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+
+.productWeight {
+  color: rgba(74, 37, 54, 0.68);
+  font-size: 0.74rem;
+  font-weight: 600;
+}
+
+.productButton {
+  width: 100%;
+  min-height: 38px;
+  border: 1px solid rgba(166, 132, 97, 0.34);
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(252, 244, 236, 0.98), rgba(244, 228, 207, 0.98));
+  color: #7a5d47;
+  font-size: 0.78rem;
+  font-weight: 700;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+.singleCardRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 225px;
+}
+
+.singleCardRow .productMedia {
+  aspect-ratio: 0.9;
+}
+
+@media (max-width: 840px) {
+  .page {
+    padding-top: 10px;
+  }
+
+  .poster {
+    margin-bottom: 26px;
+    padding: 20px 16px;
+    border-radius: 18px;
+  }
+
+  .section {
+    margin-bottom: 22px;
+  }
+
+  .categoryGrid {
+    gap: 10px;
+  }
+
+  .productGrid {
+    gap: 12px;
+  }
+
+  .productCopy {
+    padding: 8px 8px 10px;
+  }
+
+  .categoryLabel,
+  .productName {
+    font-size: 0.66rem;
+  }
+
+  .productPrice {
+    font-size: 0.82rem;
+  }
+
+  .productWeight {
+    font-size: 0.58rem;
+  }
+
+  .productButton {
+    min-height: 30px;
+    font-size: 0.58rem;
+  }
+}

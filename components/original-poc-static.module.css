@@ -1,0 +1,1056 @@
+.page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(198, 164, 92, 0.14), transparent 24%),
+    radial-gradient(circle at 80% 8%, rgba(142, 27, 47, 0.08), transparent 18%),
+    linear-gradient(180deg, #f7efe6 0%, #f1e3d2 48%, #e8d9c5 100%);
+  color: #32111f;
+}
+
+.page[data-theme="everyday"] {
+  background:
+    radial-gradient(circle at top left, rgba(95, 151, 136, 0.2), transparent 24%),
+    radial-gradient(circle at 80% 8%, rgba(11, 93, 88, 0.12), transparent 18%),
+    linear-gradient(180deg, #eef5f2 0%, #dfeee8 48%, #d2e4de 100%);
+  color: #163739;
+}
+
+.launchStrip {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 12px 20px 10px;
+  color: #53263b;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.launchDot {
+  color: rgba(120, 84, 68, 0.58);
+}
+
+.page[data-theme="everyday"] .launchStrip {
+  color: #1e5351;
+}
+
+.page[data-theme="everyday"] .launchDot {
+  color: rgba(30, 83, 81, 0.5);
+}
+
+.headerShell {
+  background: linear-gradient(180deg, #44102a 0%, #300817 100%);
+  box-shadow: inset 0 -1px 0 rgba(227, 204, 170, 0.1);
+}
+
+.page[data-theme="everyday"] .headerShell {
+  background: linear-gradient(180deg, #00363a 0%, #042528 100%);
+  box-shadow: inset 0 -1px 0 rgba(230, 209, 148, 0.12);
+}
+
+.headerInner {
+  width: min(1320px, calc(100vw - 36px));
+  margin: 0 auto;
+  padding: 18px 0 16px;
+}
+
+.headerTop {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr) 220px;
+  align-items: center;
+  gap: 28px;
+}
+
+.headerTopActions {
+  display: flex;
+  justify-content: end;
+}
+
+.logoWrap {
+  position: relative;
+  display: block;
+  width: 198px;
+  aspect-ratio: 3.2;
+}
+
+.logoImage {
+  object-fit: contain;
+}
+
+.headerTools {
+  display: grid;
+  grid-template-columns: 285px minmax(0, 1fr);
+  gap: 22px;
+}
+
+.menuButton,
+.mobileMenuPanel {
+  display: none;
+}
+
+.menuButton {
+  align-items: center;
+  gap: 0.7rem;
+  min-height: 48px;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(227, 204, 170, 0.34);
+  border-radius: 999px;
+  color: #f2e4c8;
+  background: rgba(246, 236, 222, 0.08);
+  box-shadow: 0 12px 24px rgba(22, 4, 12, 0.16);
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.menuButton:hover {
+  transform: translateY(-1px);
+  background: rgba(246, 236, 222, 0.12);
+}
+
+.menuButtonBars {
+  display: grid;
+  gap: 4px;
+  transition: transform 180ms ease;
+}
+
+.menuButtonBars span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition: transform 180ms ease, opacity 140ms ease;
+}
+
+.menuButtonLabel {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.mobileMenuPanel {
+  gap: 14px;
+  overflow: hidden;
+}
+
+.mobileMenuPanelOpen {
+  display: grid;
+}
+
+.menuButton[aria-expanded="true"] .menuButtonBars {
+  transform: scale(0.96);
+}
+
+.menuButton[aria-expanded="true"] .menuButtonBars span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.menuButton[aria-expanded="true"] .menuButtonBars span:nth-child(2) {
+  opacity: 0;
+}
+
+.menuButton[aria-expanded="true"] .menuButtonBars span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.page[data-theme="everyday"] .menuButton {
+  border-color: rgba(139, 200, 183, 0.34);
+  color: #dcf0e8;
+  background: rgba(248, 255, 252, 0.08);
+}
+
+.toolCard,
+.searchCard {
+  min-height: 56px;
+  border: 1px solid rgba(227, 204, 170, 0.32);
+  border-radius: 14px;
+  background: rgba(246, 236, 222, 0.97);
+  box-shadow: 0 12px 24px rgba(22, 4, 12, 0.16);
+}
+
+.toolCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 18px;
+}
+
+.toolIcon {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #dfabbb;
+  border-radius: 999px;
+}
+
+.toolCopy {
+  display: grid;
+  gap: 2px;
+}
+
+.toolTitle {
+  color: #492032;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.toolBody {
+  color: rgba(86, 45, 61, 0.72);
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+.toolChevron {
+  margin-left: auto;
+  color: rgba(86, 45, 61, 0.6);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.searchCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px 0 24px;
+  color: rgba(93, 58, 43, 0.74);
+}
+
+.searchText {
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+.searchIcon {
+  width: 22px;
+  height: 22px;
+  flex: none;
+  stroke: #d6ac64;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.page[data-theme="everyday"] .toolIcon {
+  border-color: #96c5bb;
+}
+
+.page[data-theme="everyday"] .toolTitle {
+  color: #174846;
+}
+
+.page[data-theme="everyday"] .toolBody,
+.page[data-theme="everyday"] .toolChevron,
+.page[data-theme="everyday"] .searchCard {
+  color: rgba(30, 83, 81, 0.7);
+}
+
+.page[data-theme="everyday"] .searchIcon {
+  stroke: #4e9a8b;
+}
+
+.actionGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.actionItem {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  color: #f0ddbc;
+  text-align: center;
+  transition: transform 180ms ease, color 180ms ease;
+}
+
+.actionItem:hover {
+  transform: translateY(-1px);
+  color: #f7e8ca;
+}
+
+.page[data-theme="everyday"] .actionItem {
+  color: #d7e8df;
+}
+
+.page[data-theme="everyday"] .actionItem:hover {
+  color: #eef7f2;
+}
+
+.actionGlyph {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 2px solid #d8b26f;
+  border-radius: 999px;
+  background: rgba(248, 236, 213, 0.06);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.page[data-theme="everyday"] .actionGlyph {
+  border-color: #8bc8b7;
+  background: rgba(248, 255, 252, 0.06);
+}
+
+.actionGlyphIcon {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.actionLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.headerDivider {
+  height: 1px;
+  margin: 18px 0 14px;
+  background: linear-gradient(90deg, transparent, rgba(227, 204, 170, 0.34), transparent);
+}
+
+.page[data-theme="everyday"] .headerDivider {
+  background: linear-gradient(90deg, transparent, rgba(139, 200, 183, 0.34), transparent);
+}
+
+.navRow {
+  display: grid;
+  gap: 14px;
+  justify-items: center;
+}
+
+.topNav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 38px;
+}
+
+.topNav a {
+  color: rgba(247, 238, 225, 0.92);
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.page[data-theme="everyday"] .topNav a {
+  color: rgba(236, 247, 243, 0.94);
+}
+
+.modeToggle {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: min(520px, 100%);
+  padding: 5px;
+  border: 1px solid rgba(224, 200, 164, 0.68);
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(248, 236, 213, 0.97), rgba(238, 223, 196, 0.94));
+  box-shadow: 0 12px 24px rgba(18, 4, 10, 0.2);
+}
+
+.modeButton {
+  min-height: 42px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: rgba(72, 33, 49, 0.82);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.modeButtonActive {
+  background: linear-gradient(135deg, #764867, #4b1632);
+  color: #f7efe4;
+}
+
+.page[data-theme="everyday"] .modeButtonActive {
+  background: linear-gradient(135deg, #5b9788, #2d7066);
+  color: #f3faf7;
+}
+
+.shell {
+  width: min(1320px, calc(100vw - 36px));
+  margin: 0 auto;
+  padding: 20px 0 56px;
+}
+
+.poster {
+  position: relative;
+  overflow: hidden;
+  min-height: clamp(310px, 29vw, 430px);
+  margin-bottom: 56px;
+  padding: clamp(34px, 5vw, 50px);
+  border: 2px solid rgba(88, 29, 55, 0.58);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 62% 18%, rgba(149, 96, 117, 0.18), transparent 18%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03), transparent 45%),
+    linear-gradient(180deg, #290818, #210612);
+  box-shadow: 0 22px 46px rgba(22, 4, 12, 0.24);
+  text-align: center;
+}
+
+.page[data-theme="everyday"] .poster {
+  border-color: rgba(24, 80, 76, 0.5);
+  background:
+    radial-gradient(circle at 62% 18%, rgba(91, 151, 136, 0.2), transparent 18%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03), transparent 45%),
+    linear-gradient(180deg, #063537, #041f22);
+  box-shadow: 0 22px 46px rgba(4, 26, 28, 0.2);
+}
+
+.poster::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(198, 164, 92, 0.18);
+  border-radius: 22px;
+  pointer-events: none;
+}
+
+.page[data-theme="everyday"] .poster::before {
+  border-color: rgba(139, 200, 183, 0.18);
+}
+
+.posterBrand {
+  margin: 0;
+  color: #f5ede3;
+  font-family: var(--font-serif), serif;
+  font-size: clamp(4rem, 9vw, 7.8rem);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.posterMaterial {
+  margin: 14px 0 0;
+  color: rgba(233, 218, 197, 0.92);
+  font-size: clamp(1rem, 1.6vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.posterOccasion {
+  margin: 28px 0 0;
+  color: rgba(198, 164, 92, 0.88);
+  font-size: clamp(0.82rem, 1.2vw, 1rem);
+  font-weight: 700;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+}
+
+.page[data-theme="everyday"] .posterOccasion {
+  color: rgba(166, 214, 203, 0.92);
+}
+
+.posterCampaign {
+  margin: 16px 0 0;
+  color: rgba(198, 164, 92, 0.88);
+  font-size: clamp(0.82rem, 1.2vw, 1rem);
+  font-weight: 700;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+}
+
+.page[data-theme="everyday"] .posterCampaign {
+  color: rgba(166, 214, 203, 0.92);
+}
+
+.posterDivider {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  margin: 14px 0 0;
+  color: #e7d9c5;
+  font-size: clamp(0.8rem, 1.1vw, 0.96rem);
+  font-weight: 700;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+}
+
+.page[data-theme="everyday"] .posterDivider {
+  color: #dcece6;
+}
+
+.posterDivider::before,
+.posterDivider::after {
+  content: "";
+  width: clamp(70px, 9vw, 100px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(198, 164, 92, 0.78), transparent);
+}
+
+.page[data-theme="everyday"] .posterDivider::before,
+.page[data-theme="everyday"] .posterDivider::after {
+  background: linear-gradient(90deg, transparent, rgba(139, 200, 183, 0.72), transparent);
+}
+
+.posterDate {
+  margin: 14px 0 0;
+  color: rgba(245, 237, 227, 0.92);
+  font-size: clamp(0.86rem, 1.25vw, 1.06rem);
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.section {
+  margin-bottom: 34px;
+}
+
+.sectionHeading {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sectionKicker {
+  margin: 0 0 8px;
+  color: rgba(114, 78, 58, 0.68);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+}
+
+.page[data-theme="everyday"] .sectionKicker {
+  color: rgba(14, 82, 75, 0.7);
+}
+
+.sectionTitle {
+  margin: 0;
+  color: #4a2536;
+  font-family: var(--font-serif), serif;
+  font-size: clamp(2.6rem, 4.6vw, 4.2rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.page[data-theme="everyday"] .sectionTitle {
+  color: #174846;
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.categoryScrollerShell {
+  position: relative;
+}
+
+.categoryCard {
+  display: grid;
+  gap: 12px;
+}
+
+.categoryMedia {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 0.78;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: 0 14px 28px rgba(70, 35, 45, 0.12);
+}
+
+.categoryImage {
+  object-fit: cover;
+}
+
+.categoryLabel {
+  color: #381725;
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.categoryScrollButton {
+  display: none;
+}
+
+.categoryScrollButtonHidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(0.9);
+}
+
+.categoryScrollButtonLeft {
+  left: 6px;
+}
+
+.categoryScrollButtonRight {
+  right: 6px;
+}
+
+.categoryScrollArrow {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1;
+  animation: category-arrow-nudge-right 1100ms ease-in-out infinite;
+}
+
+.categoryScrollButtonLeft .categoryScrollArrow {
+  animation-name: category-arrow-nudge-left;
+}
+
+.page[data-theme="everyday"] .categoryLabel,
+.page[data-theme="everyday"] .productName,
+.page[data-theme="everyday"] .productPrice {
+  color: #184847;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 320px));
+  justify-content: center;
+  gap: 18px;
+}
+
+.productCard {
+  display: grid;
+  grid-template-rows: auto auto;
+  width: min(320px, 100%);
+  overflow: hidden;
+  border-radius: 24px;
+  background: rgba(255, 251, 246, 0.86);
+  box-shadow: 0 16px 32px rgba(70, 35, 45, 0.12);
+}
+
+.page[data-theme="everyday"] .productCard {
+  background: rgba(248, 255, 252, 0.88);
+  box-shadow: 0 16px 32px rgba(18, 67, 63, 0.12);
+}
+
+.productMedia {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 0.78;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(245, 237, 227, 0.9));
+}
+
+.page[data-theme="everyday"] .productMedia {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.46), rgba(230, 244, 239, 0.96));
+}
+
+.productImageTag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid rgba(214, 184, 112, 0.9);
+  border-radius: 999px;
+  color: #f7efe4;
+  background: rgba(41, 8, 24, 0.82);
+  backdrop-filter: blur(10px);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 231, 177, 0.18),
+    0 12px 24px rgba(34, 7, 19, 0.18);
+}
+
+.productMediaBadge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0.42rem 0.78rem;
+  border: 1px solid rgba(228, 214, 182, 0.52);
+  border-radius: 999px;
+  color: #f8f6ef;
+  background: rgba(24, 81, 78, 0.88);
+  backdrop-filter: blur(10px);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: 0 12px 24px rgba(11, 48, 46, 0.18);
+}
+
+.productImage {
+  object-fit: cover;
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.productCard:hover .productPrimaryHidden {
+  opacity: 0;
+}
+
+.productCard:hover .productHoverVisible {
+  opacity: 1;
+}
+
+.productPrimaryHidden {
+  opacity: 1;
+}
+
+.productHoverVisible {
+  opacity: 0;
+}
+
+.productCopy {
+  display: grid;
+  gap: 10px;
+  padding: 12px 14px 14px;
+}
+
+.productName {
+  color: #3f1c2c;
+  font-size: 0.98rem;
+  font-weight: 700;
+  line-height: 1.32;
+}
+
+.productPrice {
+  color: #3d1426;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.productPriceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.productPriceMeta {
+  color: rgba(98, 56, 74, 0.7);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.productWeight {
+  color: rgba(98, 56, 74, 0.72);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.page[data-theme="everyday"] .productPriceMeta {
+  color: rgba(24, 72, 71, 0.64);
+}
+
+.page[data-theme="everyday"] .productWeight {
+  color: rgba(24, 72, 71, 0.64);
+}
+
+.productActions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.productButton {
+  min-height: 38px;
+  border: 1px solid rgba(198, 164, 92, 0.34);
+  border-radius: 999px;
+  background: linear-gradient(180deg, #4b1632, #290818);
+  color: #f7efe4;
+  font-size: 0.9rem;
+  font-weight: 700;
+  box-shadow: 0 14px 24px rgba(34, 7, 19, 0.16);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    filter 180ms ease;
+}
+
+.productButton:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.04);
+  box-shadow: 0 18px 28px rgba(34, 7, 19, 0.2);
+}
+
+.page[data-theme="everyday"] .productButton {
+  border-color: rgba(139, 200, 183, 0.34);
+  background: linear-gradient(180deg, #0d4f53, #041f22);
+  color: #f3faf7;
+  box-shadow: 0 14px 24px rgba(4, 26, 28, 0.16);
+}
+
+.productWhatsappButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 1rem;
+  border: 1px solid rgba(198, 164, 92, 0.34);
+  border-radius: 999px;
+  color: #f7efe4;
+  background: linear-gradient(180deg, #2c8f67, #176047);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  box-shadow: 0 14px 24px rgba(16, 74, 54, 0.14);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    filter 180ms ease;
+}
+
+.productWhatsappButton:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.04);
+  box-shadow: 0 18px 28px rgba(16, 74, 54, 0.18);
+}
+
+.page[data-theme="everyday"] .productWhatsappButton {
+  border-color: rgba(139, 200, 183, 0.32);
+  color: #f3faf7;
+  background: linear-gradient(180deg, #29a372, #176047);
+}
+
+.singleCardRow {
+  display: flex;
+}
+
+.singleCardRow .productCard {
+  width: min(320px, 100%);
+}
+
+@media (max-width: 1100px) {
+  .headerTop {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .headerTopActions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .headerTools,
+  .actionGrid {
+    width: 100%;
+  }
+
+  .categoryGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .productGrid {
+    grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 320px));
+  }
+}
+
+@media (max-width: 760px) {
+  .launchStrip {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 10px;
+  }
+
+  .headerTop {
+    grid-template-columns: minmax(0, 1fr) auto;
+    justify-items: stretch;
+    gap: 14px;
+  }
+
+  .logoWrap {
+    width: min(180px, 100%);
+  }
+
+  .desktopUtilityTools,
+  .desktopActionGrid {
+    display: none;
+  }
+
+  .headerTopActions {
+    width: auto;
+    justify-content: end;
+  }
+
+  .menuButton {
+    display: inline-flex;
+  }
+
+  .mobileMenuPanel {
+    display: grid;
+    max-height: 0;
+    margin-top: 0;
+    padding: 0 14px;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    border: 1px solid transparent;
+    border-radius: 22px;
+    background: rgba(248, 236, 213, 0);
+    box-shadow: 0 0 0 rgba(22, 4, 12, 0);
+    transition:
+      max-height 180ms ease,
+      margin-top 180ms ease,
+      padding 180ms ease,
+      opacity 160ms ease,
+      transform 180ms ease,
+      border-color 180ms ease,
+      background-color 180ms ease,
+      box-shadow 180ms ease;
+  }
+
+  .page[data-theme="everyday"] .mobileMenuPanel {
+    background: rgba(248, 255, 252, 0);
+    box-shadow: 0 0 0 rgba(4, 26, 28, 0);
+  }
+
+  .mobileMenuPanelOpen {
+    max-height: 320px;
+    margin-top: 14px;
+    padding: 14px;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    border-color: rgba(227, 204, 170, 0.18);
+    background: rgba(248, 236, 213, 0.08);
+    box-shadow: 0 18px 32px rgba(22, 4, 12, 0.12);
+  }
+
+  .page[data-theme="everyday"] .mobileMenuPanelOpen {
+    border-color: rgba(139, 200, 183, 0.18);
+    background: rgba(248, 255, 252, 0.08);
+    box-shadow: 0 18px 32px rgba(4, 26, 28, 0.12);
+  }
+
+  .mobileMenuPanel .headerTools {
+    grid-template-columns: 1fr;
+  }
+
+  .mobileMenuPanel .actionGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .topNav {
+    gap: 10px 22px;
+  }
+
+  .modeToggle {
+    width: 100%;
+  }
+
+  .categoryGrid {
+    display: grid;
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - 24px) / 3);
+    gap: 12px;
+    overflow-x: auto;
+    padding: 0 0 10px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .categoryGrid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .categoryCard {
+    min-width: 0;
+    scroll-snap-align: start;
+    gap: 8px;
+  }
+
+  .categoryMedia {
+    aspect-ratio: 0.9;
+    border-radius: 18px;
+  }
+
+  .categoryLabel {
+    font-size: 0.74rem;
+  }
+
+  .categoryScrollButton {
+    position: absolute;
+    top: 37%;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 1px solid rgba(198, 164, 92, 0.3);
+    border-radius: 999px;
+    color: #f7efe4;
+    background: rgba(41, 8, 24, 0.82);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 14px 24px rgba(34, 7, 19, 0.16);
+    transition:
+      opacity 180ms ease,
+      transform 180ms ease,
+      background-color 180ms ease,
+      border-color 180ms ease;
+  }
+
+  .page[data-theme="everyday"] .categoryScrollButton {
+    border-color: rgba(139, 200, 183, 0.34);
+    color: #eef7f2;
+    background: rgba(4, 31, 34, 0.84);
+    box-shadow: 0 14px 24px rgba(4, 26, 28, 0.16);
+  }
+
+  .productGrid {
+    grid-template-columns: minmax(0, 320px);
+  }
+
+  .productActions {
+    grid-template-columns: 1fr;
+  }
+
+  .poster {
+    min-height: 260px;
+    margin-bottom: 42px;
+  }
+
+  .posterBrand {
+    font-size: clamp(2.8rem, 12vw, 4.4rem);
+  }
+}
+
+@keyframes category-arrow-nudge-right {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes category-arrow-nudge-left {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-5px);
+  }
+}
