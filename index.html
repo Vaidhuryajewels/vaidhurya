@@ -1,0 +1,1154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VAIDHURYA Launch Storefront</title>
+    <meta
+      name="description"
+      content="Static VAIDHURYA launch storefront with Bridal and Everyday Elegance sections for GitHub Pages."
+    />
+    <style>
+      :root {
+        --page-bg:
+          radial-gradient(circle at top left, rgba(198, 164, 92, 0.14), transparent 24%),
+          radial-gradient(circle at 80% 8%, rgba(142, 27, 47, 0.08), transparent 18%),
+          linear-gradient(180deg, #f7efe6 0%, #f1e3d2 48%, #e8d9c5 100%);
+        --text: #32111f;
+        --muted: rgba(98, 56, 74, 0.72);
+        --header-bg: linear-gradient(180deg, #44102a 0%, #300817 100%);
+        --header-line: rgba(227, 204, 170, 0.34);
+        --accent: rgba(198, 164, 92, 0.88);
+        --poster-bg:
+          radial-gradient(circle at 62% 18%, rgba(149, 96, 117, 0.18), transparent 18%),
+          radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03), transparent 45%),
+          linear-gradient(180deg, #290818, #210612);
+        --poster-border: rgba(88, 29, 55, 0.58);
+        --poster-inner: rgba(198, 164, 92, 0.18);
+        --card-bg: rgba(255, 251, 246, 0.86);
+        --media-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(245, 237, 227, 0.9));
+        --primary-btn: linear-gradient(180deg, #2c8f67, #176047);
+        --tool-bg: rgba(246, 236, 222, 0.97);
+        --tool-text: rgba(86, 45, 61, 0.72);
+        --tool-title: #492032;
+        --tool-outline: rgba(227, 204, 170, 0.32);
+        --icon-accent: #d6ac64;
+        --mode-active: linear-gradient(135deg, #764867, #4b1632);
+        --mode-active-text: #f7efe4;
+        --mode-idle: rgba(72, 33, 49, 0.82);
+      }
+
+      body[data-theme="everyday"] {
+        --page-bg:
+          radial-gradient(circle at top left, rgba(95, 151, 136, 0.2), transparent 24%),
+          radial-gradient(circle at 80% 8%, rgba(11, 93, 88, 0.12), transparent 18%),
+          linear-gradient(180deg, #eef5f2 0%, #dfeee8 48%, #d2e4de 100%);
+        --text: #163739;
+        --muted: rgba(24, 72, 71, 0.64);
+        --header-bg: linear-gradient(180deg, #00363a 0%, #042528 100%);
+        --header-line: rgba(139, 200, 183, 0.34);
+        --accent: rgba(166, 214, 203, 0.92);
+        --poster-bg:
+          radial-gradient(circle at 62% 18%, rgba(91, 151, 136, 0.2), transparent 18%),
+          radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03), transparent 45%),
+          linear-gradient(180deg, #063537, #041f22);
+        --poster-border: rgba(24, 80, 76, 0.5);
+        --poster-inner: rgba(139, 200, 183, 0.18);
+        --card-bg: rgba(248, 255, 252, 0.88);
+        --media-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.46), rgba(230, 244, 239, 0.96));
+        --primary-btn: linear-gradient(180deg, #29a372, #176047);
+        --tool-bg: rgba(246, 236, 222, 0.97);
+        --tool-text: rgba(30, 83, 81, 0.7);
+        --tool-title: #174846;
+        --tool-outline: rgba(139, 200, 183, 0.34);
+        --icon-accent: #4e9a8b;
+        --mode-active: linear-gradient(135deg, #5b9788, #2d7066);
+        --mode-active-text: #f3faf7;
+        --mode-idle: rgba(30, 83, 81, 0.82);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", system-ui, sans-serif;
+        background: var(--page-bg);
+        color: var(--text);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+      }
+
+      .launch-strip {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        padding: 12px 20px 10px;
+        color: #53263b;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-align: center;
+        flex-wrap: wrap;
+      }
+
+      body[data-theme="everyday"] .launch-strip {
+        color: #1e5351;
+      }
+
+      .header-shell {
+        background: var(--header-bg);
+        box-shadow: inset 0 -1px 0 rgba(227, 204, 170, 0.1);
+      }
+
+      .header-inner,
+      .shell {
+        width: min(1320px, calc(100vw - 36px));
+        margin: 0 auto;
+      }
+
+      .header-inner {
+        padding: 18px 0 16px;
+      }
+
+      .header-top {
+        display: grid;
+        grid-template-columns: 210px minmax(0, 1fr) 220px;
+        align-items: center;
+        gap: 28px;
+      }
+
+      .logo-wrap {
+        display: block;
+        width: 198px;
+        margin: 0 auto;
+      }
+
+      .logo-wrap img {
+        object-fit: contain;
+      }
+
+      .header-tools {
+        display: grid;
+        grid-template-columns: 285px minmax(0, 1fr);
+        gap: 22px;
+      }
+
+      .tool-card,
+      .search-card {
+        min-height: 56px;
+        border: 1px solid var(--tool-outline);
+        border-radius: 14px;
+        background: var(--tool-bg);
+        box-shadow: 0 12px 24px rgba(22, 4, 12, 0.16);
+      }
+
+      .tool-card {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0 18px;
+      }
+
+      .tool-icon {
+        width: 18px;
+        height: 18px;
+        border: 2px solid #dfabbb;
+        border-radius: 999px;
+      }
+
+      body[data-theme="everyday"] .tool-icon {
+        border-color: #96c5bb;
+      }
+
+      .tool-copy {
+        display: grid;
+        gap: 2px;
+      }
+
+      .tool-title {
+        color: var(--tool-title);
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .tool-body,
+      .tool-chevron,
+      .search-card {
+        color: var(--tool-text);
+      }
+
+      .tool-body {
+        font-size: 0.76rem;
+        font-weight: 600;
+      }
+
+      .tool-chevron {
+        margin-left: auto;
+        font-size: 1rem;
+      }
+
+      .search-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px 0 24px;
+      }
+
+      .search-text {
+        font-size: 0.9rem;
+        letter-spacing: 0.02em;
+      }
+
+      .search-icon {
+        width: 22px;
+        height: 22px;
+        flex: none;
+        stroke: var(--icon-accent);
+        stroke-width: 1.9;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .action-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .action-item {
+        display: grid;
+        justify-items: center;
+        gap: 8px;
+        color: rgba(247, 238, 225, 0.92);
+      }
+
+      body[data-theme="everyday"] .action-item {
+        color: #d7e8df;
+      }
+
+      .action-glyph {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border: 2px solid #d8b26f;
+        border-radius: 999px;
+        background: rgba(248, 236, 213, 0.06);
+      }
+
+      body[data-theme="everyday"] .action-glyph {
+        border-color: #8bc8b7;
+      }
+
+      .action-glyph svg {
+        width: 22px;
+        height: 22px;
+        stroke: currentColor;
+        stroke-width: 1.75;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+      }
+
+      .action-label {
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .header-divider {
+        height: 1px;
+        margin: 18px 0 14px;
+        background: linear-gradient(90deg, transparent, var(--header-line), transparent);
+      }
+
+      .nav-row {
+        display: grid;
+        gap: 14px;
+        justify-items: center;
+      }
+
+      .top-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 38px;
+        color: rgba(247, 238, 225, 0.92);
+      }
+
+      body[data-theme="everyday"] .top-nav {
+        color: rgba(236, 247, 243, 0.94);
+      }
+
+      .top-nav a {
+        font-size: 0.92rem;
+        font-weight: 500;
+      }
+
+      .mode-toggle {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: min(520px, 100%);
+        padding: 5px;
+        border: 1px solid rgba(224, 200, 164, 0.68);
+        border-radius: 999px;
+        background: linear-gradient(180deg, rgba(248, 236, 213, 0.97), rgba(238, 223, 196, 0.94));
+        box-shadow: 0 12px 24px rgba(18, 4, 10, 0.2);
+      }
+
+      .mode-button {
+        min-height: 42px;
+        border: 0;
+        border-radius: 999px;
+        background: transparent;
+        color: var(--mode-idle);
+        font-size: 0.88rem;
+        font-weight: 800;
+        cursor: pointer;
+      }
+
+      .mode-button.active {
+        background: var(--mode-active);
+        color: var(--mode-active-text);
+      }
+
+      .shell {
+        padding: 20px 0 56px;
+      }
+
+      .poster {
+        position: relative;
+        overflow: hidden;
+        min-height: clamp(310px, 29vw, 430px);
+        margin-bottom: 56px;
+        padding: clamp(34px, 5vw, 50px);
+        border: 2px solid var(--poster-border);
+        border-radius: 30px;
+        background: var(--poster-bg);
+        box-shadow: 0 22px 46px rgba(22, 4, 12, 0.24);
+        text-align: center;
+      }
+
+      .poster::before {
+        content: "";
+        position: absolute;
+        inset: 12px;
+        border: 1px solid var(--poster-inner);
+        border-radius: 22px;
+        pointer-events: none;
+      }
+
+      .poster-brand {
+        margin: 0;
+        color: #f5ede3;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(4rem, 9vw, 7.8rem);
+        font-weight: 500;
+        letter-spacing: 0.05em;
+      }
+
+      .poster-material {
+        margin: 14px 0 0;
+        color: rgba(233, 218, 197, 0.92);
+        font-size: clamp(1rem, 1.6vw, 1.5rem);
+        font-weight: 700;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+      }
+
+      .poster-line {
+        margin: 16px 0 0;
+        color: var(--accent);
+        font-size: clamp(0.82rem, 1.2vw, 1rem);
+        font-weight: 700;
+        letter-spacing: 0.34em;
+        text-transform: uppercase;
+      }
+
+      .poster-divider {
+        display: inline-flex;
+        align-items: center;
+        gap: 18px;
+        margin: 14px 0 0;
+        color: #e7d9c5;
+        font-size: clamp(0.8rem, 1.1vw, 0.96rem);
+        font-weight: 700;
+        letter-spacing: 0.34em;
+        text-transform: uppercase;
+      }
+
+      body[data-theme="everyday"] .poster-divider {
+        color: #dcece6;
+      }
+
+      .poster-divider::before,
+      .poster-divider::after {
+        content: "";
+        width: clamp(70px, 9vw, 100px);
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      }
+
+      .poster-date {
+        margin: 14px 0 0;
+        color: rgba(245, 237, 227, 0.92);
+        font-size: clamp(0.86rem, 1.25vw, 1.06rem);
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+      }
+
+      .section {
+        margin-bottom: 34px;
+      }
+
+      .section-heading {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .section-kicker {
+        margin: 0 0 8px;
+        color: rgba(114, 78, 58, 0.68);
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.26em;
+        text-transform: uppercase;
+      }
+
+      body[data-theme="everyday"] .section-kicker {
+        color: rgba(14, 82, 75, 0.7);
+      }
+
+      .section-title {
+        margin: 0;
+        color: #4a2536;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(2.6rem, 4.6vw, 4.2rem);
+        font-weight: 500;
+        line-height: 1;
+      }
+
+      body[data-theme="everyday"] .section-title {
+        color: #174846;
+      }
+
+      .category-scroller-shell {
+        position: relative;
+      }
+
+      .category-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .category-card {
+        display: grid;
+        gap: 12px;
+      }
+
+      .category-media {
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 0.78;
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.74);
+        box-shadow: 0 14px 28px rgba(70, 35, 45, 0.12);
+      }
+
+      .category-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .category-label {
+        color: #381725;
+        font-size: 0.92rem;
+        font-weight: 700;
+        line-height: 1.25;
+      }
+
+      body[data-theme="everyday"] .category-label {
+        color: #184847;
+      }
+
+      .category-scroll-button {
+        display: none;
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 320px));
+        justify-content: center;
+        gap: 18px;
+      }
+
+      .single-card-row {
+        display: flex;
+      }
+
+      .product-card {
+        width: min(320px, 100%);
+        display: grid;
+        overflow: hidden;
+        border-radius: 24px;
+        background: var(--card-bg);
+        box-shadow: 0 16px 32px rgba(70, 35, 45, 0.12);
+      }
+
+      .product-media {
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 0.78;
+        background: var(--media-bg);
+      }
+
+      .product-image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 240ms ease, transform 240ms ease;
+      }
+
+      .product-primary {
+        opacity: 1;
+      }
+
+      .product-hover {
+        opacity: 0;
+        transform: scale(var(--base-scale, 1));
+      }
+
+      .product-card:hover .product-primary {
+        opacity: 0;
+      }
+
+      .product-card:hover .product-hover {
+        opacity: 1;
+        transform: scale(var(--hover-scale, var(--base-scale, 1)));
+      }
+
+      .product-image-tag,
+      .product-media-badge {
+        position: absolute;
+        z-index: 2;
+        display: inline-flex;
+        align-items: center;
+        min-height: 30px;
+        padding: 0.42rem 0.78rem;
+        border-radius: 999px;
+        backdrop-filter: blur(10px);
+        font-size: 0.64rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .product-image-tag {
+        top: 14px;
+        left: 14px;
+        border: 1px solid rgba(214, 184, 112, 0.9);
+        color: #f7efe4;
+        background: rgba(41, 8, 24, 0.82);
+      }
+
+      .product-media-badge {
+        top: 14px;
+        right: 14px;
+        border: 1px solid rgba(228, 214, 182, 0.52);
+        color: #f8f6ef;
+        background: rgba(24, 81, 78, 0.88);
+      }
+
+      .product-copy {
+        display: grid;
+        gap: 10px;
+        padding: 12px 14px 14px;
+      }
+
+      .product-name,
+      .product-price {
+        color: #3f1c2c;
+      }
+
+      body[data-theme="everyday"] .product-name,
+      body[data-theme="everyday"] .product-price {
+        color: #184847;
+      }
+
+      .product-name {
+        font-size: 0.98rem;
+        font-weight: 700;
+        line-height: 1.32;
+      }
+
+      .product-price {
+        font-size: 1rem;
+        font-weight: 800;
+      }
+
+      .product-price-row {
+        display: flex;
+        align-items: baseline;
+        gap: 0.45rem;
+        flex-wrap: wrap;
+      }
+
+      .product-weight {
+        color: var(--muted);
+        font-size: 0.82rem;
+        font-weight: 600;
+      }
+
+      .product-whatsapp-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        min-height: 38px;
+        padding: 0 1rem;
+        border: 1px solid rgba(198, 164, 92, 0.34);
+        border-radius: 999px;
+        color: #f7efe4;
+        background: linear-gradient(180deg, #2c8f67, #176047);
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 0.03em;
+        box-shadow: 0 14px 24px rgba(16, 74, 54, 0.14);
+      }
+
+      .whatsapp-icon {
+        width: 17px;
+        height: 17px;
+        flex: none;
+        stroke: currentColor;
+        stroke-width: 1.9;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+      }
+
+      @media (max-width: 760px) {
+        .header-top {
+          grid-template-columns: 1fr;
+          justify-items: center;
+        }
+
+        .header-tools {
+          grid-template-columns: 1fr;
+          width: 100%;
+        }
+
+        .action-grid {
+          width: 100%;
+        }
+
+        .top-nav {
+          gap: 10px 22px;
+        }
+
+        .mode-toggle {
+          width: 100%;
+        }
+
+        .poster {
+          min-height: 260px;
+          margin-bottom: 42px;
+        }
+
+        .poster-brand {
+          font-size: clamp(2.8rem, 12vw, 4.4rem);
+        }
+
+        .category-grid {
+          grid-template-columns: none;
+          grid-auto-flow: column;
+          grid-auto-columns: calc((100% - 24px) / 3);
+          gap: 12px;
+          overflow-x: auto;
+          padding: 0 0 10px;
+          scroll-snap-type: x mandatory;
+          scrollbar-width: none;
+        }
+
+        .category-grid::-webkit-scrollbar {
+          display: none;
+        }
+
+        .category-card {
+          min-width: 0;
+          scroll-snap-align: start;
+          gap: 8px;
+        }
+
+        .category-media {
+          aspect-ratio: 0.9;
+          border-radius: 18px;
+        }
+
+        .category-label {
+          font-size: 0.74rem;
+        }
+
+        .category-scroll-button {
+          position: absolute;
+          top: 37%;
+          z-index: 2;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 36px;
+          height: 36px;
+          border: 1px solid rgba(198, 164, 92, 0.3);
+          border-radius: 999px;
+          color: #f7efe4;
+          background: rgba(41, 8, 24, 0.82);
+          backdrop-filter: blur(10px);
+          cursor: pointer;
+        }
+
+        .category-scroll-button.left {
+          left: 6px;
+        }
+
+        .category-scroll-button.right {
+          right: 6px;
+        }
+
+        body[data-theme="everyday"] .category-scroll-button {
+          border-color: rgba(139, 200, 183, 0.34);
+          color: #eef7f2;
+          background: rgba(4, 31, 34, 0.84);
+        }
+      }
+    </style>
+  </head>
+  <body data-theme="bridal">
+    <div class="launch-strip" id="launch-strip"></div>
+
+    <header class="header-shell">
+      <div class="header-inner">
+        <div class="header-top">
+          <a class="logo-wrap" href="./index.html" aria-label="VAIDHURYA home">
+            <img src="./public/vaidhurya-logo.png" alt="VAIDHURYA logo" />
+          </a>
+
+          <div class="header-tools">
+            <div class="tool-card">
+              <span class="tool-icon" aria-hidden="true"></span>
+              <div class="tool-copy">
+                <span class="tool-title">Where to Deliver?</span>
+                <span class="tool-body">Select Delivery Location</span>
+              </div>
+              <span class="tool-chevron" aria-hidden="true">▾</span>
+            </div>
+
+            <div class="search-card">
+              <span class="search-text" id="search-text"></span>
+              <svg class="search-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="10.5" cy="10.5" r="6.5"></circle>
+                <path d="M15.5 15.5 20 20"></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="action-grid">
+            <div class="action-item">
+              <span class="action-glyph" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="8.25" r="3.25"></circle>
+                  <path d="M5.75 18.25C7.1 15.78 9.17 14.5 12 14.5s4.9 1.28 6.25 3.75"></path>
+                </svg>
+              </span>
+              <span class="action-label">ACCOUNT</span>
+            </div>
+            <div class="action-item">
+              <span class="action-glyph" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 18.75 5.8 12.72a3.83 3.83 0 0 1 0-5.44 3.91 3.91 0 0 1 5.5 0L12 7.98l.7-.7a3.91 3.91 0 0 1 5.5 0 3.83 3.83 0 0 1 0 5.44Z"></path>
+                </svg>
+              </span>
+              <span class="action-label">WISHLIST</span>
+            </div>
+            <div class="action-item">
+              <span class="action-glyph" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M8.25 8.5V7.75a3.75 3.75 0 1 1 7.5 0v.75"></path>
+                  <path d="M6.25 8.5h11.5l-.82 9.25a1.5 1.5 0 0 1-1.49 1.37H8.56a1.5 1.5 0 0 1-1.49-1.37Z"></path>
+                  <path d="M10 12.25h.01M14 12.25h.01"></path>
+                </svg>
+              </span>
+              <span class="action-label">CART</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-divider"></div>
+
+        <div class="nav-row">
+          <nav class="top-nav" id="top-nav" aria-label="Collections"></nav>
+
+          <div class="mode-toggle" role="tablist" aria-label="Shopping mode">
+            <button class="mode-button active" id="bridal-tab" type="button">Bridal</button>
+            <button class="mode-button" id="everyday-tab" type="button">Everyday Elegance</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="poster">
+        <p class="poster-brand">VAIDHURYA</p>
+        <p class="poster-material" id="poster-material"></p>
+        <p class="poster-line" id="poster-occasion" hidden></p>
+        <p class="poster-line" id="poster-campaign" hidden></p>
+        <p class="poster-divider" id="poster-divider"></p>
+        <p class="poster-date" id="poster-date" hidden></p>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="section-kicker">Curated Collections</p>
+          <h1 class="section-title">Shop by Category</h1>
+        </div>
+
+        <div class="category-scroller-shell">
+          <button class="category-scroll-button left" id="category-left" type="button" aria-label="Scroll left">←</button>
+          <div class="category-grid" id="category-grid"></div>
+          <button class="category-scroll-button right" id="category-right" type="button" aria-label="Scroll right">→</button>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="section-kicker" id="primary-kicker"></p>
+          <h2 class="section-title" id="primary-title"></h2>
+        </div>
+
+        <div class="product-grid" id="primary-products"></div>
+      </section>
+
+      <section class="section" id="secondary-section" hidden>
+        <div class="section-heading">
+          <p class="section-kicker" id="secondary-kicker"></p>
+          <h2 class="section-title" id="secondary-title"></h2>
+        </div>
+
+        <div class="single-card-row" id="secondary-products"></div>
+      </section>
+    </main>
+
+    <script>
+      const WHATSAPP_NUMBER = "917026651789";
+
+      const THEME_CONTENT = {
+        bridal: {
+          launchStrip: [
+            "Pan India Free Shipping",
+            "Akshaya Tritiya Launch",
+            "Gold-Coated 925 Silver",
+          ],
+          searchText: 'Search "Bridal Sets"',
+          navItems: [
+            { href: "#brides-collection", label: "Bride's Collection" },
+            { href: "#grooms-collection", label: "Groom's Collection" },
+            { href: "#victorian-jewellery", label: "Victorian Jewellery" },
+            { href: "#jadayu-kundan", label: "Jadayu Kundan" },
+            { href: "#gift", label: "Gift" },
+          ],
+          categories: [
+            { href: "#brides-collection", label: "Bride's Collection", imageSrc: "./public/category-brides-collection.png" },
+            { href: "#grooms-collection", label: "Groom's Collection", imageSrc: "./public/category-grooms-collection.png" },
+            { href: "#victorian-jewellery", label: "Victorian Jewellery", imageSrc: "./public/category-victorian-jewellery.png" },
+            { href: "#jadayu-kundan", label: "Jadayu Kundan", imageSrc: "./public/category-jadayu-kundan.png" },
+            { href: "#gift", label: "Gift", imageSrc: "./public/category-gift.png" },
+          ],
+          primary: {
+            kicker: "Bridal Collection",
+            title: "Bride's Collection",
+            products: [
+              {
+                key: "chandraharam",
+                name: "Chandraharam Mangalasutra",
+                imageSrc: "./public/bridal-chandraharam-mangalasutra.png",
+                hoverImageSrc: "./public/bridal-chandraharam-mangalasutra-hover.png",
+                imagePosition: "center 60%",
+                imageScale: 1.14,
+                hoverImagePosition: "center 58%",
+                hoverImageScale: 1.12,
+                price: "23,793/-",
+                imagePriceTag: "23,793/-",
+                weight: "Wt: 42gm",
+              },
+              {
+                key: "lakshmi-gutta",
+                name: "Lakshmi gutha pusa neclace + Ear rings",
+                imageSrc: "./public/bridal-piece-2.png",
+                hoverImageSrc: "./public/bridal-piece-2-hover.png",
+                imagePosition: "center 24%",
+                imageScale: 1.06,
+                hoverImagePosition: "center 22%",
+                hoverImageScale: 1.04,
+                price: "42,895/-",
+                imagePriceTag: "42,895/-",
+                weight: "Wt: 78gm",
+              },
+              {
+                key: "floral-crystal",
+                name: "white flowral crystal neclace + ear rings",
+                imageSrc: "./public/bridal-piece-3.png",
+                hoverImageSrc: "./public/bridal-piece-3-hover.png",
+                imagePosition: "center 20%",
+                imageScale: 1.04,
+                hoverImagePosition: "center 18%",
+                hoverImageScale: 1.04,
+                price: "17,069/-",
+                imagePriceTag: "17,069/-",
+                weight: "Wt: 31gms",
+              },
+            ],
+          },
+          secondary: {
+            kicker: "Victorian Collection",
+            title: "Victorian Jewellery",
+            products: [
+              {
+                key: "victorian-polki",
+                name: "Lakshmi Victorian Maangtika",
+                imageSrc: "./public/bridal-piece-4.jpeg",
+                hoverImageSrc: "./public/victorian-polki-secondary.png",
+                imagePosition: "center 18%",
+                imageScale: 1.06,
+                hoverImagePosition: "center top",
+                hoverImageScale: 1.34,
+                price: "9,900/-",
+                imagePriceTag: "9,900/-",
+                weight: "Wt: 18gms",
+              },
+            ],
+          },
+          poster: {
+            material: "GOLD-COATED 925 SILVER",
+            occasion: "AKSHAYA TRITIYA",
+            divider: "GRAND LAUNCH",
+            date: "APRIL 19, 2026",
+          },
+        },
+        everyday: {
+          launchStrip: [
+            "Pan India Free Shipping",
+            "Everyday Elegance",
+            "925 Sterling Silver",
+          ],
+          searchText: 'Search "Silver Bracelets"',
+          navItems: [
+            { href: "#bracelet-collection", label: "Bracelet Collection" },
+            { href: "#anklet-collection", label: "Anklet Collection" },
+            { href: "#chains-and-pendants", label: "Chains and Pendants" },
+          ],
+          categories: [
+            { href: "#bracelet-collection", label: "Bracelet Collection", imageSrc: "./public/category-bracelet-collection.png" },
+            { href: "#anklet-collection", label: "Anklet Collection", imageSrc: "./public/category-anklet-collection.png" },
+            { href: "#chains-and-pendants", label: "Chains and Pendants", imageSrc: "./public/category-chains-and-pendants.png" },
+            { href: "#for-him", label: "For Him", imageSrc: "./public/category-for-him.png" },
+            { href: "#for-her", label: "For Her", imageSrc: "./public/category-for-her.png" },
+          ],
+          primary: {
+            kicker: "Everyday Collection",
+            title: "Everyday Elegance",
+            products: [
+              {
+                key: "poc-nose-pin",
+                name: "Nose Pin",
+                imageSrc: "./public/everyday-nose-pin.png",
+                price: "₹321",
+              },
+              {
+                key: "celestial-cuff-bracelet",
+                name: "Celestial Cuff Bracelet",
+                imageSrc: "./public/category-bracelet-collection.png",
+                price: "₹2,299",
+                weight: "Wt: 19gm",
+              },
+              {
+                key: "moonlit-anklet-pair",
+                name: "Moonlit Anklet Pair",
+                imageSrc: "./public/category-anklet-collection.png",
+                price: "₹3,000",
+                weight: "Wt: 16gm",
+                mediaBadge: "Sold Out",
+              },
+              {
+                key: "dual-tone-pendant-chain",
+                name: "Dual-Tone Pendant Chain",
+                imageSrc: "./public/category-chains-and-pendants.png",
+                price: "₹2,500",
+                weight: "Wt: 14gm",
+                mediaBadge: "Sold Out",
+              },
+            ],
+          },
+          poster: {
+            material: "925 STERLING SILVER",
+            campaign: "AKSHAYA TRITIYA",
+            divider: "GRAND LAUNCH",
+          },
+        },
+      };
+
+      const state = { theme: "bridal" };
+
+      const launchStrip = document.getElementById("launch-strip");
+      const searchText = document.getElementById("search-text");
+      const topNav = document.getElementById("top-nav");
+      const posterMaterial = document.getElementById("poster-material");
+      const posterOccasion = document.getElementById("poster-occasion");
+      const posterCampaign = document.getElementById("poster-campaign");
+      const posterDivider = document.getElementById("poster-divider");
+      const posterDate = document.getElementById("poster-date");
+      const categoryGrid = document.getElementById("category-grid");
+      const primaryKicker = document.getElementById("primary-kicker");
+      const primaryTitle = document.getElementById("primary-title");
+      const primaryProducts = document.getElementById("primary-products");
+      const secondarySection = document.getElementById("secondary-section");
+      const secondaryKicker = document.getElementById("secondary-kicker");
+      const secondaryTitle = document.getElementById("secondary-title");
+      const secondaryProducts = document.getElementById("secondary-products");
+      const bridalTab = document.getElementById("bridal-tab");
+      const everydayTab = document.getElementById("everyday-tab");
+
+      function whatsappHref(product) {
+        const url = new URL(window.location.href);
+        url.hash = `product-${product.key}`;
+        const message = [
+          `Hello VAIDHURYA, I'm interested in ${product.name}.`,
+          `Value: ${product.price}`,
+          `Page link: ${url.toString()}`,
+        ].join("\n");
+        return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+      }
+
+      function cardMarkup(product) {
+        const baseScale = product.imageScale ?? 1;
+        const hoverScale = product.hoverImageScale ?? (product.hoverImageSrc ? (product.imageScale ?? 1) : baseScale * 1.2);
+        const hoverSrc = product.hoverImageSrc ?? product.imageSrc;
+        const hoverPosition = product.hoverImagePosition ?? product.imagePosition ?? "center center";
+        const primaryPosition = product.imagePosition ?? "center center";
+
+        return `
+          <article class="product-card" id="product-${product.key}">
+            <a class="product-media" href="#product-${product.key}">
+              <img
+                class="product-image product-primary"
+                src="${product.imageSrc}"
+                alt="${product.name}"
+                style="object-position:${primaryPosition};transform:scale(${baseScale});"
+              />
+              <img
+                class="product-image product-hover"
+                src="${hoverSrc}"
+                alt=""
+                style="object-position:${hoverPosition};--base-scale:${baseScale};--hover-scale:${hoverScale};"
+              />
+              ${product.imagePriceTag ? `<span class="product-image-tag">${product.imagePriceTag}</span>` : ""}
+              ${product.mediaBadge ? `<span class="product-media-badge">${product.mediaBadge}</span>` : ""}
+            </a>
+            <div class="product-copy">
+              <div class="product-name">${product.name}</div>
+              <div class="product-price-row"><div class="product-price">${product.price}</div></div>
+              ${product.weight ? `<div class="product-weight">${product.weight}</div>` : ""}
+              <a class="product-whatsapp-button" href="${whatsappHref(product)}" target="_blank" rel="noreferrer">
+                <svg class="whatsapp-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M20 11.56a8.02 8.02 0 0 1-11.86 7.05L4 20l1.47-4.02A8 8 0 1 1 20 11.56Z"></path>
+                  <path d="M9.32 7.9c.2-.44.42-.45.63-.46h.42c.14 0 .36.03.56.47.19.44.66 1.53.72 1.65.06.13.1.29.02.46-.08.17-.13.28-.25.42-.12.14-.25.31-.36.42-.12.13-.25.27-.1.52.14.25.65 1.08 1.4 1.75.96.86 1.77 1.14 2.02 1.27.25.13.4.11.54-.07.15-.18.63-.73.8-.98.17-.25.34-.21.57-.12.24.08 1.49.7 1.75.82.25.13.42.19.48.29.06.11.06.63-.15 1.22-.21.59-1.22 1.16-1.69 1.23-.46.07-1.04.11-1.68-.1-.39-.13-.9-.3-1.55-.58-2.71-1.18-4.47-4.09-4.61-4.28-.14-.19-1.1-1.47-1.1-2.81 0-1.34.7-2 1-2.27Z"></path>
+                </svg>
+                <span>Order now</span>
+              </a>
+            </div>
+          </article>
+        `;
+      }
+
+      function renderTheme(theme) {
+        state.theme = theme;
+        document.body.dataset.theme = theme;
+        const content = THEME_CONTENT[theme];
+
+        launchStrip.innerHTML = content.launchStrip
+          .map((item, index) => `${index > 0 ? `<span style="color:rgba(120,84,68,0.58)">• </span>` : ""}${item}`)
+          .join("");
+
+        searchText.textContent = content.searchText;
+        topNav.innerHTML = content.navItems.map((item) => `<a href="${item.href}">${item.label}</a>`).join("");
+
+        bridalTab.classList.toggle("active", theme === "bridal");
+        everydayTab.classList.toggle("active", theme === "everyday");
+
+        posterMaterial.textContent = content.poster.material;
+        posterOccasion.textContent = content.poster.occasion ?? "";
+        posterOccasion.hidden = !content.poster.occasion;
+        posterCampaign.textContent = content.poster.campaign ?? "";
+        posterCampaign.hidden = !content.poster.campaign;
+        posterDivider.textContent = content.poster.divider;
+        posterDate.textContent = content.poster.date ?? "";
+        posterDate.hidden = !content.poster.date;
+
+        categoryGrid.innerHTML = content.categories
+          .map((item) => `
+            <a class="category-card" href="${item.href}">
+              <div class="category-media">
+                <img src="${item.imageSrc}" alt="${item.label}" />
+              </div>
+              <span class="category-label">${item.label}</span>
+            </a>
+          `)
+          .join("");
+
+        primaryKicker.textContent = content.primary.kicker;
+        primaryTitle.textContent = content.primary.title;
+        primaryProducts.innerHTML = content.primary.products.map(cardMarkup).join("");
+
+        if (content.secondary) {
+          secondarySection.hidden = false;
+          secondaryKicker.textContent = content.secondary.kicker;
+          secondaryTitle.textContent = content.secondary.title;
+          secondaryProducts.innerHTML = content.secondary.products.map(cardMarkup).join("");
+        } else {
+          secondarySection.hidden = true;
+          secondaryProducts.innerHTML = "";
+        }
+      }
+
+      bridalTab.addEventListener("click", () => renderTheme("bridal"));
+      everydayTab.addEventListener("click", () => renderTheme("everyday"));
+
+      const categoryLeft = document.getElementById("category-left");
+      const categoryRight = document.getElementById("category-right");
+      categoryLeft.addEventListener("click", () => categoryGrid.scrollBy({ left: -220, behavior: "smooth" }));
+      categoryRight.addEventListener("click", () => categoryGrid.scrollBy({ left: 220, behavior: "smooth" }));
+
+      renderTheme("bridal");
+    </script>
+  </body>
+</html>
