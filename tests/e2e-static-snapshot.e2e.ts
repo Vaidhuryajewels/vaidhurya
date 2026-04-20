@@ -112,8 +112,8 @@ test("poc route preserves the bridal page and restores the everyday switch", { t
     const firstBridalCardWidth = await firstBridalCard.evaluate((element) => element.getBoundingClientRect().width);
     assert.equal(firstBridalCardWidth, 320);
 
-    const bridalTab = page.getByRole("tab", { name: "Bridal" });
-    const everydayTab = page.getByRole("tab", { name: "Everyday Elegance" });
+    const bridalTab = page.getByRole("tab", { name: "Gold-Coated 925 Silver" });
+    const everydayTab = page.getByRole("tab", { name: "925 Italina silver" });
 
     assert.equal(await bridalTab.getAttribute("aria-selected"), "true");
     assert.equal(await everydayTab.getAttribute("aria-selected"), "false");

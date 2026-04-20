@@ -395,7 +395,7 @@ const THEME_CONTENT: Record<ThemeKey, ThemeContent> = {
     sectionKicker: "Everyday Collection",
     sectionTitle: "Everyday Elegance",
     poster: {
-      material: "925 STERLING SILVER",
+      material: "ITALIAN 925 SILVER",
       campaign: "AKSHAYA TRITIYA",
       divider: "GRAND LAUNCH",
     },
@@ -609,7 +609,7 @@ export function OriginalPocStatic() {
                 aria-selected={theme === "bridal"}
                 onClick={() => setTheme("bridal")}
               >
-                Bridal
+                Gold-Coated 925 Silver
               </button>
               <button
                 className={`${styles.modeButton} ${theme === "everyday" ? styles.modeButtonActive : ""}`}
@@ -618,7 +618,7 @@ export function OriginalPocStatic() {
                 aria-selected={theme === "everyday"}
                 onClick={() => setTheme("everyday")}
               >
-                Everyday Elegance
+                925 Italina silver
               </button>
             </div>
           </div>
