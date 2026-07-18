@@ -3,8 +3,10 @@ import test from "node:test";
 import {
   calculateCartTotals,
   createOrderFromCart,
+  getBrowsePriceOverride,
   getOrderByNumber,
   getProductsBySlugs,
+  getVariantDisplayLabel,
 } from "../lib/commerce-data.ts";
 
 test("calculateCartTotals computes browse totals and free shipping threshold", () => {
@@ -57,4 +59,26 @@ test("product and order helpers resolve known entities safely", () => {
   const order = getOrderByNumber("VDY24041801");
   assert.ok(order);
   assert.equal(order?.customerName, "Ananya Rao");
+});
+
+test("browse price overrides preserve curated storefront values", () => {
+  assert.equal(getBrowsePriceOverride("celestial-cuff-bracelet"), 2299);
+  assert.equal(getBrowsePriceOverride("moonlit-anklet-pair"), 3000);
+  assert.equal(getBrowsePriceOverride("dual-tone-pendant-chain"), 2500);
+});
+
+test("everyday variant display labels hide weight while bridal labels keep it", () => {
+  const [everydayProduct, bridalProduct] = getProductsBySlugs([
+    "celestial-cuff-bracelet",
+    "chandraharam-mangalasutra",
+  ]);
+
+  assert.equal(
+    getVariantDisplayLabel(everydayProduct, everydayProduct.variants[0]),
+    "Petite Fit",
+  );
+  assert.equal(
+    getVariantDisplayLabel(bridalProduct, bridalProduct.variants[0]),
+    "Heirloom Polish / 42 gm",
+  );
 });

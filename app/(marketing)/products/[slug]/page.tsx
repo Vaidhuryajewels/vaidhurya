@@ -2,26 +2,34 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ProductPurchasePanel } from "@/components/product-purchase-panel";
 import { SiteShell } from "@/components/site-shell";
+import { SellerCustomerPreview } from "@/components/seller-customer-preview";
 import {
   computePriceForVariant,
   formatCurrency,
+  getBrowsePriceOverride,
   getProductBySlug,
+  getVariantDisplayLabel,
 } from "@/lib/commerce-data";
 
 export default async function ProductPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ slug: string }>;
+  searchParams: Promise<{ preview?: string }>;
 }) {
   const { slug } = await params;
+  const { preview } = await searchParams;
   const product = getProductBySlug(slug);
 
   if (!product) {
+    if (preview === "seller") return <SiteShell theme="bridal" pageEyebrow="Seller preview" pageTitle="Unpublished listing" pageIntro="Review the customer-facing presentation before server sync."><SellerCustomerPreview slug={slug} /></SiteShell>;
     notFound();
   }
 
   const featuredVariant = product.variants[0];
   const featuredPrice = computePriceForVariant(featuredVariant);
+  const featuredBrowseTotal = getBrowsePriceOverride(product.slug) ?? featuredPrice.subtotal;
 
   return (
     <SiteShell
@@ -30,6 +38,7 @@ export default async function ProductPage({
       pageTitle={product.title}
       pageIntro={product.subtitle}
     >
+      {preview === "seller" ? <div className="customer-preview-banner"><strong>Seller preview</strong><span>This is how the published listing appears to customers.</span><a href={`/seller/listings/${product.slug}`}>Return to seller listing</a></div> : null}
       <section className="content-shell product-detail-grid">
         <article className="content-card">
           <div className="product-detail-media">
@@ -52,8 +61,8 @@ export default async function ProductPage({
             <div className="support-grid">
               <article className="support-card">
                 <span className="field-label">Featured browse total</span>
-                <p>{formatCurrency(featuredPrice.subtotal)}</p>
-                <p className="field-help">{featuredVariant.label}</p>
+                <p>{formatCurrency(featuredBrowseTotal)}</p>
+                <p className="field-help">{getVariantDisplayLabel(product, featuredVariant)}</p>
               </article>
               <article className="support-card">
                 <span className="field-label">Certification</span>

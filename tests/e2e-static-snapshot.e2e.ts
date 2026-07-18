@@ -138,8 +138,11 @@ test("poc route preserves the bridal page and restores the everyday switch", { t
     });
     assert.notEqual(firstEverydayHoverStyle.transform, "none");
     assert.equal(await secondEverydayCard.getByText("₹2,299", { exact: true }).isVisible(), true);
+    assert.equal(await secondEverydayCard.getByText(/Wt:/i).count(), 0);
     assert.equal(await thirdEverydayCard.getByText("₹3,000", { exact: true }).isVisible(), true);
+    assert.equal(await thirdEverydayCard.getByText(/Wt:/i).count(), 0);
     assert.equal(await fourthEverydayCard.getByText("₹2,500", { exact: true }).isVisible(), true);
+    assert.equal(await fourthEverydayCard.getByText(/Wt:/i).count(), 0);
     assert.equal(await thirdEverydayCard.getByText("Sold Out", { exact: true }).isVisible(), true);
     assert.equal(await fourthEverydayCard.getByText("Sold Out", { exact: true }).isVisible(), true);
     assert.equal(await page.locator("[data-poc-theme]").getAttribute("data-poc-theme"), "everyday");
@@ -294,6 +297,70 @@ test("poc route moves utility cards into a burger menu on mobile", { timeout: 12
 
     const scrolledBackLeft = await categoryCarousel.evaluate((element) => element.scrollLeft);
     assert.ok(scrolledBackLeft < scrollLeftAfterRight);
+  } finally {
+    await browser?.close();
+    server.kill("SIGTERM");
+    await once(server, "exit");
+  }
+});
+
+test("product route keeps curated browse pricing aligned with the poc preview", { timeout: 120_000 }, async () => {
+  let serverOutput = "";
+  let browser: Awaited<ReturnType<typeof chromium.launch>> | null = null;
+  const server = spawn(
+    "/Applications/Codex.app/Contents/Resources/node",
+    [
+      path.join("node_modules", "next", "dist", "bin", "next"),
+      "dev",
+      "--webpack",
+      "--hostname",
+      "127.0.0.1",
+      "--port",
+      String(port),
+    ],
+    {
+      cwd: workspace,
+      env: {
+        ...process.env,
+        CI: "1",
+        NEXT_TEST_WASM_DIR: path.join(
+          workspace,
+          "node_modules",
+          "@next",
+          "swc-wasm-nodejs",
+        ),
+      },
+      stdio: ["ignore", "pipe", "pipe"],
+    },
+  );
+
+  server.stdout?.on("data", (chunk) => {
+    serverOutput += chunk.toString();
+  });
+  server.stderr?.on("data", (chunk) => {
+    serverOutput += chunk.toString();
+  });
+
+  try {
+    await waitForServer(`${baseUrl}/products/celestial-cuff-bracelet`, () => serverOutput);
+
+    browser = await chromium.launch({ headless: true });
+    const page = await browser.newPage();
+
+    await page.goto(`${baseUrl}/products/celestial-cuff-bracelet`);
+    await page.getByText("Celestial Cuff Bracelet", { exact: true }).waitFor();
+
+    const purchasePanel = page.locator(".purchase-panel");
+    assert.equal(await purchasePanel.getByText("Current browse total", { exact: true }).isVisible(), true);
+    assert.equal(await purchasePanel.getByText("₹2,299", { exact: true }).isVisible(), true);
+    assert.equal(await purchasePanel.getByText("Live rate snapshot", { exact: true }).count(), 0);
+    assert.equal(await purchasePanel.getByText("Ships in 3 to 4 working days", { exact: true }).isVisible(), true);
+    assert.equal(await purchasePanel.getByText("Metal cost", { exact: true }).count(), 0);
+    assert.equal(await purchasePanel.locator("#variant").count(), 0);
+    assert.equal(await purchasePanel.getByText("Petite Fit", { exact: true }).isVisible(), true);
+    assert.equal(await purchasePanel.getByText(/19 gm/i).count(), 0);
+    assert.equal(await page.getByText("Featured browse total", { exact: true }).first().locator("..").getByText("₹2,299", { exact: true }).isVisible(), true);
+    assert.equal(await page.getByText("Petite Fit / 19 gm", { exact: true }).count(), 0);
   } finally {
     await browser?.close();
     server.kill("SIGTERM");

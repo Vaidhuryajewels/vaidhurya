@@ -1,0 +1,24 @@
+import assert from "node:assert/strict";
+import { spawn } from "node:child_process";
+import { once } from "node:events";
+import path from "node:path";
+import test from "node:test";
+import { chromium } from "playwright";
+
+const port = 3110;
+const baseUrl = `http://127.0.0.1:${port}`;
+const workspace = "/Users/dpvenkatesh/Desktop/vaidhurya";
+async function waitForServer() { const deadline = Date.now() + 60_000; while (Date.now() < deadline) { try { if ((await fetch(baseUrl)).ok) return; } catch {} await new Promise((resolve) => setTimeout(resolve, 300)); } throw new Error("Seller test server timed out"); }
+
+test("seller app uses real catalog data and seller-entered inquiries", { timeout: 120_000 }, async () => {
+  const server = spawn("/Applications/Codex.app/Contents/Resources/cua_node/bin/node", [path.join("node_modules", "next", "dist", "bin", "next"), "dev", "--webpack", "--hostname", "127.0.0.1", "--port", String(port)], { cwd: workspace, env: { ...process.env, CI: "1", SELLER_DEMO_MODE: "1", OPENROUTER_API_KEY: "", NEXT_TEST_WASM_DIR: path.join(workspace, "node_modules", "@next", "swc-wasm-nodejs") }, stdio: "ignore" });
+  let browser: Awaited<ReturnType<typeof chromium.launch>> | null = null;
+  try {
+    await waitForServer(); browser = await chromium.launch({ headless: true }); const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
+    await page.goto(`${baseUrl}/seller`); await page.getByText("Your workspace is ready.").waitFor(); assert.equal(await page.getByText("Good morning, Aruna").count(), 0); assert.equal(await page.getByText("Not connected").count(), 3);
+    await page.setViewportSize({ width: 812, height: 789 }); await page.getByRole("button", { name: "Edit seller profile" }).click(); await page.getByRole("dialog", { name: "Edit profile" }).waitFor(); assert.equal(await page.getByLabel("Display name").inputValue(), "VAIDHURYA Seller"); await page.getByRole("button", { name: "Close profile editor" }).click();
+    await page.goto(`${baseUrl}/seller/inbox`); await page.getByText("No customer inquiries").waitFor(); await page.getByRole("button", { name: "Add first inquiry" }).click(); await page.getByLabel("Customer name").fill("Real Customer"); await page.getByLabel("Phone, handle or profile").fill("+91 90000 00000"); await page.getByLabel("Customer message").fill("Please confirm whether this item is available."); await page.getByRole("button", { name: "Save inquiry" }).click(); await page.getByText("Real Customer").first().waitFor(); await page.getByText("WhatsApp sending is not connected").waitFor();
+    await page.goto(`${baseUrl}/seller/listings`); await page.setViewportSize({ width: 488, height: 789 }); const addListingButton = page.getByRole("link", { name: "＋ Add listing" }); assert.equal(await addListingButton.isVisible(), true); assert.ok((await addListingButton.boundingBox())!.width > 80); await page.setViewportSize({ width: 812, height: 789 }); await page.getByLabel("Search listings").fill("VDY-CHM-001"); assert.equal(await page.locator(".listing-card").count(), 1); const sellerView = page.getByRole("link", { name: "Seller view" }); const sellerHref = await sellerView.first().getAttribute("href"); assert.match(sellerHref ?? "", /^\/seller\/listings\//);
+    await page.goto(`${baseUrl}/seller/listings/new`); await page.getByText("Capture", { exact: true }).waitFor(); await page.getByText("Verify", { exact: true }).waitFor(); await page.getByText("Publish", { exact: true }).waitFor(); await page.getByLabel("Listing description").fill("BIS certified 925 silver necklace, 82 grams, ₹23,793"); await page.getByRole("button", { name: "Save draft" }).click(); await page.getByText(/Draft saved/).waitFor(); await page.getByLabel("Capture listing media").setInputFiles(path.join(workspace, "public", "category-victorian-jewellery.png")); await page.getByRole("button", { name: /Structure listing with AI/ }).click(); await page.getByText("Review extracted details").waitFor(); await page.getByText(/of 6 checks complete/).waitFor(); assert.equal(await page.getByLabel("Metal").inputValue(), "silver"); await page.getByLabel("Listing title").fill("E2E Saved Necklace"); await page.getByLabel("Inventory").fill("4"); await page.getByRole("button", { name: "Approve & publish" }).click(); await page.getByText("Listing saved").waitFor(); assert.match(await page.evaluate(() => localStorage.getItem("vaidhurya-seller-published-listings") || ""), /E2E Saved Necklace/); await page.goto(`${baseUrl}/seller/listings`); await page.getByText("E2E Saved Necklace").waitFor(); await page.reload(); await page.getByText("E2E Saved Necklace").waitFor(); assert.equal(await page.getByText("E2E Saved Necklace").count(), 1);
+  } finally { await browser?.close(); if (server.exitCode === null) { server.kill("SIGTERM"); await once(server, "exit"); } }
+});

@@ -5,13 +5,14 @@ import { useCart } from "@/components/cart-provider";
 import {
   computePriceForVariant,
   formatCurrency,
+  getBrowsePriceOverride,
   getProductBySlug,
+  getVariantDisplayLabel,
 } from "@/lib/commerce-data";
 
 export function ProductPurchasePanel({ productSlug }: { productSlug: string }) {
   const product = getProductBySlug(productSlug);
   const { addItem, isWishlisted, toggleWishlist } = useCart();
-  const [selectedVariantId, setSelectedVariantId] = useState(product?.variants[0]?.id ?? "");
   const [giftWrap, setGiftWrap] = useState(false);
   const [addedMessage, setAddedMessage] = useState("");
 
@@ -19,9 +20,10 @@ export function ProductPurchasePanel({ productSlug }: { productSlug: string }) {
     return null;
   }
 
-  const selectedVariant =
-    product.variants.find((variant) => variant.id === selectedVariantId) ?? product.variants[0];
+  const selectedVariant = product.variants[0];
   const breakdown = computePriceForVariant(selectedVariant, { giftWrap });
+  const browsePriceOverride = getBrowsePriceOverride(product.slug);
+  const displayTotal = browsePriceOverride ?? breakdown.subtotal;
 
   return (
     <aside className="purchase-panel">
@@ -33,22 +35,6 @@ export function ProductPurchasePanel({ productSlug }: { productSlug: string }) {
           checkout session is created.
         </p>
       </div>
-
-      <label className="form-stack" htmlFor="variant">
-        <span className="field-label">Variant</span>
-        <select
-          className="luxury-select"
-          id="variant"
-          value={selectedVariant.id}
-          onChange={(event) => setSelectedVariantId(event.target.value)}
-        >
-          {product.variants.map((variant) => (
-            <option key={variant.id} value={variant.id}>
-              {variant.label}
-            </option>
-          ))}
-        </select>
-      </label>
 
       <label className="toggle-row" htmlFor="gift-wrap">
         <div>
@@ -64,44 +50,45 @@ export function ProductPurchasePanel({ productSlug }: { productSlug: string }) {
       </label>
 
       <div className="breakdown-panel">
-        <div className="breakdown-row">
-          <span>Metal cost</span>
-          <strong>{formatCurrency(breakdown.metalCost)}</strong>
-        </div>
-        <div className="breakdown-row">
-          <span>Making charge</span>
-          <strong>{formatCurrency(breakdown.makingCharge)}</strong>
-        </div>
-        <div className="breakdown-row">
-          <span>Stone and finish</span>
-          <strong>{formatCurrency(breakdown.stoneCharge)}</strong>
-        </div>
-        <div className="breakdown-row">
-          <span>Packaging</span>
-          <strong>{formatCurrency(breakdown.packagingCharge)}</strong>
-        </div>
-        {giftWrap ? (
-          <div className="breakdown-row">
-            <span>Gift service</span>
-            <strong>{formatCurrency(breakdown.giftWrapCharge)}</strong>
-          </div>
+        {browsePriceOverride === undefined ? (
+          <>
+            <div className="breakdown-row">
+              <span>Metal cost</span>
+              <strong>{formatCurrency(breakdown.metalCost)}</strong>
+            </div>
+            <div className="breakdown-row">
+              <span>Making charge</span>
+              <strong>{formatCurrency(breakdown.makingCharge)}</strong>
+            </div>
+            <div className="breakdown-row">
+              <span>Stone and finish</span>
+              <strong>{formatCurrency(breakdown.stoneCharge)}</strong>
+            </div>
+            <div className="breakdown-row">
+              <span>Packaging</span>
+              <strong>{formatCurrency(breakdown.packagingCharge)}</strong>
+            </div>
+            {giftWrap ? (
+              <div className="breakdown-row">
+                <span>Gift service</span>
+                <strong>{formatCurrency(breakdown.giftWrapCharge)}</strong>
+              </div>
+            ) : null}
+          </>
         ) : null}
         <div className="breakdown-divider" />
         <div className="breakdown-row is-total">
           <span>Current browse total</span>
-          <strong>{formatCurrency(breakdown.subtotal)}</strong>
+          <strong>{formatCurrency(displayTotal)}</strong>
         </div>
       </div>
 
+      <p className="field-help">{getVariantDisplayLabel(product, selectedVariant)}</p>
+
       <div className="support-grid">
         <article className="support-card">
-          <span className="field-label">Live rate snapshot</span>
-          <p>{breakdown.metalRateLabel}</p>
-          <p className="field-help">Snapshot {breakdown.snapshotVersion}</p>
-        </article>
-        <article className="support-card">
           <span className="field-label">Fulfillment note</span>
-          <p>{selectedVariant.leadTimeLabel}</p>
+          <p>Ships in 3 to 4 working days</p>
           <p className="field-help">{selectedVariant.inventoryLabel}</p>
         </article>
       </div>

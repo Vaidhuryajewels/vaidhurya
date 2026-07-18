@@ -1,0 +1,302 @@
+{"kind":"deck","id":"vaidhurya-pitch","slideCount":9,"slideSize":{"width":1280,"height":720}}
+{"kind":"slide","slide":1,"id":"xg9gwa"}
+{"kind":"slide","slide":2,"id":"q1c57c"}
+{"kind":"slide","slide":3,"id":"5bk8xh"}
+{"kind":"slide","slide":4,"id":"6ulp9r"}
+{"kind":"slide","slide":5,"id":"1r0bdf"}
+{"kind":"slide","slide":6,"id":"5s5ios"}
+{"kind":"slide","slide":7,"id":"35jmec"}
+{"kind":"slide","slide":8,"id":"f06pl8"}
+{"kind":"slide","slide":9,"id":"wtxp2b"}
+{"kind":"shape","slide":1,"id":"2","role":"right band","shapeType":"rect","bbox":[896,0,384,720]}
+{"kind":"shape","slide":1,"id":"3","role":"left glow","shapeType":"ellipse","bbox":[-140,470,360,300]}
+{"kind":"shape","slide":1,"id":"4","role":"right glow","shapeType":"ellipse","bbox":[1010,-90,320,260]}
+{"kind":"shape","slide":1,"id":"5","role":"cover emerald veil","shapeType":"rect","bbox":[802,0,478,720]}
+{"kind":"shape","slide":1,"id":"6","role":"cover accent rule","shapeType":"rect","bbox":[64,164,7,360]}
+{"kind":"shape","slide":1,"id":"7","role":"photo frame","shapeType":"roundRect","bbox":[832,74,376,572]}
+{"kind":"shape","slide":1,"id":"8","role":"photo accent","shapeType":"rect","bbox":[832,74,8,572]}
+{"kind":"image","slide":1,"id":"9","role":"photo panel","path":"/Users/dpvenkatesh/Desktop/vaidhurya/public/bridal-piece-4.jpeg","bbox":[840,82,360,556]}
+{"kind":"image","slide":1,"id":"10","role":"logo","path":"/Users/dpvenkatesh/Desktop/vaidhurya/outputs/vaidhurya-pitch-deck/vaidhurya-logo-clean.png","bbox":[64,44,286,92]}
+{"kind":"textbox","slide":1,"id":"11","role":"cover title","text":"AI-Native Marketplace for Jewelry in India","textPreview":"AI-Native Marketplace for Jewelry in India","textChars":42,"textLines":1,"bbox":[82,158,650,184]}
+{"kind":"textbox","slide":1,"id":"12","role":"cover subtitle","text":"A trusted multi-seller platform for metal, diamond, and gemstone jewelry, personalized through outfit-led AI styling recommendations.","textPreview":"A trusted multi-seller platform for metal, diamond, and gemstone jewelry, personalized through outfit-led AI styling recommendations.","textChars":133,"textLines":1,"bbox":[86,348,620,86]}
+{"kind":"shape","slide":1,"id":"13","role":"cover moment panel","shapeType":"roundRect","bbox":[86,500,420,92]}
+{"kind":"textbox","slide":1,"id":"14","role":"cover moment","text":"Premium commerce. Personalized by AI.","textPreview":"Premium commerce. Personalized by AI.","textChars":37,"textLines":1,"bbox":[112,522,360,40]}
+{"kind":"textbox","slide":1,"id":"15","role":"caption","text":"Confidential | VAIDHURYA","textPreview":"Confidential | VAIDHURYA","textChars":24,"textLines":1,"bbox":[64,674,260,22]}
+{"kind":"shape","slide":2,"id":"2","role":"right band","shapeType":"rect","bbox":[896,0,384,720]}
+{"kind":"shape","slide":2,"id":"3","role":"left glow","shapeType":"ellipse","bbox":[-140,470,360,300]}
+{"kind":"shape","slide":2,"id":"4","role":"right glow","shapeType":"ellipse","bbox":[1010,-90,320,260]}
+{"kind":"shape","slide":2,"id":"5","role":"photo frame","shapeType":"roundRect","bbox":[908,86,284,212]}
+{"kind":"shape","slide":2,"id":"6","role":"photo accent","shapeType":"rect","bbox":[908,86,8,212]}
+{"kind":"image","slide":2,"id":"7","role":"photo panel","path":"/Users/dpvenkatesh/Desktop/vaidhurya/public/category-victorian-jewellery.png","bbox":[916,94,268,196]}
+{"kind":"textbox","slide":2,"id":"8","role":"header","text":"PROBLEM + SOLUTION","textPreview":"PROBLEM + SOLUTION","textChars":18,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":2,"id":"9","role":"header","text":"02 / 09","textPreview":"02 / 09","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":2,"id":"10","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":2,"id":"11","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":2,"id":"12","role":"title","text":"Fragmented Market, Personalized Opportunity","textPreview":"Fragmented Market, Personalized Opportunity","textChars":43,"textLines":1,"bbox":[64,86,760,142]}
+{"kind":"textbox","slide":2,"id":"13","role":"subtitle","text":"India's jewelry market is still trust-heavy, fragmented, and difficult to personalize online.","textPreview":"India's jewelry market is still trust-heavy, fragmented, and difficult to personalize online.","textChars":93,"textLines":1,"bbox":[66,234,720,70]}
+{"kind":"shape","slide":2,"id":"14","role":"card panel: Buyer Pain","shapeType":"roundRect","bbox":[84,388,355.3333333333333,220]}
+{"kind":"shape","slide":2,"id":"15","role":"card accent: Buyer Pain","shapeType":"rect","bbox":[84,388,8,220]}
+{"kind":"shape","slide":2,"id":"16","role":"icon badge","shapeType":"ellipse","bbox":[106,412,54,54]}
+{"kind":"shape","slide":2,"id":"17","role":"icon glyph","shapeType":"rect","bbox":[122,441,6,12]}
+{"kind":"shape","slide":2,"id":"18","role":"icon glyph","shapeType":"rect","bbox":[131,433,6,20]}
+{"kind":"shape","slide":2,"id":"19","role":"icon glyph","shapeType":"rect","bbox":[140,426,6,27]}
+{"kind":"textbox","slide":2,"id":"20","role":"card label","text":"Buyer Pain","textPreview":"Buyer Pain","textChars":10,"textLines":1,"bbox":[172,410,247.33333333333331,28]}
+{"kind":"textbox","slide":2,"id":"21","role":"card body: Buyer Pain","text":"Discovery is inconsistent across\nmetal, diamond, and gemstone\ncategories, and shoppers\nstruggle to match jewelry to\noutfit, occasion, and budget.","textPreview":"Discovery is inconsistent across | metal, diamond, and gemstone | categories, and shoppers | struggle to match jewelry to | outfit, occasion, and budget.","textChars":145,"textLines":5,"bbox":[108,474,307.3333333333333,112]}
+{"kind":"shape","slide":2,"id":"22","role":"card panel: Seller Pain","shapeType":"roundRect","bbox":[463.3333333333333,388,355.3333333333333,220]}
+{"kind":"shape","slide":2,"id":"23","role":"card accent: Seller Pain","shapeType":"rect","bbox":[463.3333333333333,388,8,220]}
+{"kind":"shape","slide":2,"id":"24","role":"icon badge","shapeType":"ellipse","bbox":[485.3333333333333,412,54,54]}
+{"kind":"shape","slide":2,"id":"25","role":"icon glyph","shapeType":"ellipse","bbox":[498.3333333333333,430,10,10]}
+{"kind":"shape","slide":2,"id":"26","role":"icon glyph","shapeType":"ellipse","bbox":[516.3333333333333,439,10,10]}
+{"kind":"shape","slide":2,"id":"27","role":"icon glyph","shapeType":"rect","bbox":[507.3333333333333,437,19,3]}
+{"kind":"textbox","slide":2,"id":"28","role":"card label","text":"Seller Pain","textPreview":"Seller Pain","textChars":11,"textLines":1,"bbox":[551.3333333333333,410,247.33333333333331,28]}
+{"kind":"textbox","slide":2,"id":"29","role":"card body: Seller Pain","text":"Independent sellers have limited\ndigital visibility, uneven\nmerchandising, and high customer\nacquisition friction in a market\nstill led by offline trust.","textPreview":"Independent sellers have limited | digital visibility, uneven | merchandising, and high customer | acquisition friction in a market | still led by offline trust.","textChars":153,"textLines":5,"bbox":[487.3333333333333,474,307.3333333333333,112]}
+{"kind":"shape","slide":2,"id":"30","role":"card panel: VAIDHURYA","shapeType":"roundRect","bbox":[842.6666666666666,388,355.3333333333333,220]}
+{"kind":"shape","slide":2,"id":"31","role":"card accent: VAIDHURYA","shapeType":"rect","bbox":[842.6666666666666,388,8,220]}
+{"kind":"shape","slide":2,"id":"32","role":"icon badge","shapeType":"ellipse","bbox":[864.6666666666666,412,54,54]}
+{"kind":"shape","slide":2,"id":"33","role":"icon glyph","shapeType":"roundRect","bbox":[877.6666666666666,427,26,13]}
+{"kind":"shape","slide":2,"id":"34","role":"icon glyph","shapeType":"roundRect","bbox":[882.6666666666666,436,26,13]}
+{"kind":"shape","slide":2,"id":"35","role":"icon glyph","shapeType":"roundRect","bbox":[887.6666666666666,445,20,10]}
+{"kind":"textbox","slide":2,"id":"36","role":"card label","text":"VAIDHURYA","textPreview":"VAIDHURYA","textChars":9,"textLines":1,"bbox":[930.6666666666666,410,247.33333333333331,28]}
+{"kind":"textbox","slide":2,"id":"37","role":"card body: VAIDHURYA","text":"A trusted multi-seller\nmarketplace that combines\npremium commerce with AI-led\nrecommendations tailored to\ndress, style, occasion, and\nspend.","textPreview":"A trusted multi-seller | marketplace that combines | premium commerce with AI-led | recommendations tailored to | dress, style, occasion, and | spend.","textChars":140,"textLines":6,"bbox":[866.6666666666666,474,307.3333333333333,112]}
+{"kind":"textbox","slide":2,"id":"38","role":"caption","text":"Confidential | VAIDHURYA","textPreview":"Confidential | VAIDHURYA","textChars":24,"textLines":1,"bbox":[64,674,260,22]}
+{"kind":"shape","slide":3,"id":"2","role":"right band","shapeType":"rect","bbox":[896,0,384,720]}
+{"kind":"shape","slide":3,"id":"3","role":"left glow","shapeType":"ellipse","bbox":[-140,470,360,300]}
+{"kind":"shape","slide":3,"id":"4","role":"right glow","shapeType":"ellipse","bbox":[1010,-90,320,260]}
+{"kind":"shape","slide":3,"id":"5","role":"photo frame","shapeType":"roundRect","bbox":[908,86,284,212]}
+{"kind":"shape","slide":3,"id":"6","role":"photo accent","shapeType":"rect","bbox":[908,86,8,212]}
+{"kind":"image","slide":3,"id":"7","role":"photo panel","path":"/Users/dpvenkatesh/Desktop/vaidhurya/public/bridal-piece-3.png","bbox":[916,94,268,196]}
+{"kind":"textbox","slide":3,"id":"8","role":"header","text":"AGENTIC EDGE","textPreview":"AGENTIC EDGE","textChars":12,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":3,"id":"9","role":"header","text":"03 / 09","textPreview":"03 / 09","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":3,"id":"10","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":3,"id":"11","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":3,"id":"12","role":"title","text":"What Makes VAIDHURYA Agentic","textPreview":"What Makes VAIDHURYA Agentic","textChars":28,"textLines":1,"bbox":[64,86,760,142]}
+{"kind":"textbox","slide":3,"id":"13","role":"subtitle","text":"The platform does more than search inventory; it interprets intent and curates the best next action.","textPreview":"The platform does more than search inventory; it interprets intent and curates the best next action.","textChars":100,"textLines":1,"bbox":[66,234,720,70]}
+{"kind":"shape","slide":3,"id":"14","role":"card panel: Understands","shapeType":"roundRect","bbox":[84,388,355.3333333333333,220]}
+{"kind":"shape","slide":3,"id":"15","role":"card accent: Understands","shapeType":"rect","bbox":[84,388,8,220]}
+{"kind":"shape","slide":3,"id":"16","role":"icon badge","shapeType":"ellipse","bbox":[106,412,54,54]}
+{"kind":"shape","slide":3,"id":"17","role":"icon glyph","shapeType":"rect","bbox":[122,441,6,12]}
+{"kind":"shape","slide":3,"id":"18","role":"icon glyph","shapeType":"rect","bbox":[131,433,6,20]}
+{"kind":"shape","slide":3,"id":"19","role":"icon glyph","shapeType":"rect","bbox":[140,426,6,27]}
+{"kind":"textbox","slide":3,"id":"20","role":"card label","text":"Understands","textPreview":"Understands","textChars":11,"textLines":1,"bbox":[172,410,247.33333333333331,28]}
+{"kind":"textbox","slide":3,"id":"21","role":"card body: Understands","text":"A customer uploads a dress photo\nand the system reads color,\nsilhouette, neckline, occasion,\nand aesthetic cues.","textPreview":"A customer uploads a dress photo | and the system reads color, | silhouette, neckline, occasion, | and aesthetic cues.","textChars":112,"textLines":4,"bbox":[108,474,307.3333333333333,112]}
+{"kind":"shape","slide":3,"id":"22","role":"card panel: Matches","shapeType":"roundRect","bbox":[463.3333333333333,388,355.3333333333333,220]}
+{"kind":"shape","slide":3,"id":"23","role":"card accent: Matches","shapeType":"rect","bbox":[463.3333333333333,388,8,220]}
+{"kind":"shape","slide":3,"id":"24","role":"icon badge","shapeType":"ellipse","bbox":[485.3333333333333,412,54,54]}
+{"kind":"shape","slide":3,"id":"25","role":"icon glyph","shapeType":"ellipse","bbox":[498.3333333333333,430,10,10]}
+{"kind":"shape","slide":3,"id":"26","role":"icon glyph","shapeType":"ellipse","bbox":[516.3333333333333,439,10,10]}
+{"kind":"shape","slide":3,"id":"27","role":"icon glyph","shapeType":"rect","bbox":[507.3333333333333,437,19,3]}
+{"kind":"textbox","slide":3,"id":"28","role":"card label","text":"Matches","textPreview":"Matches","textChars":7,"textLines":1,"bbox":[551.3333333333333,410,247.33333333333331,28]}
+{"kind":"textbox","slide":3,"id":"29","role":"card body: Matches","text":"Those signals map to category,\nmetal tone, stone palette,\ndesign language, and price band\nacross seller inventory.","textPreview":"Those signals map to category, | metal tone, stone palette, | design language, and price band | across seller inventory.","textChars":114,"textLines":4,"bbox":[487.3333333333333,474,307.3333333333333,112]}
+{"kind":"shape","slide":3,"id":"30","role":"card panel: Learns","shapeType":"roundRect","bbox":[842.6666666666666,388,355.3333333333333,220]}
+{"kind":"shape","slide":3,"id":"31","role":"card accent: Learns","shapeType":"rect","bbox":[842.6666666666666,388,8,220]}
+{"kind":"shape","slide":3,"id":"32","role":"icon badge","shapeType":"ellipse","bbox":[864.6666666666666,412,54,54]}
+{"kind":"shape","slide":3,"id":"33","role":"icon glyph","shapeType":"roundRect","bbox":[877.6666666666666,427,26,13]}
+{"kind":"shape","slide":3,"id":"34","role":"icon glyph","shapeType":"roundRect","bbox":[882.6666666666666,436,26,13]}
+{"kind":"shape","slide":3,"id":"35","role":"icon glyph","shapeType":"roundRect","bbox":[887.6666666666666,445,20,10]}
+{"kind":"textbox","slide":3,"id":"36","role":"card label","text":"Learns","textPreview":"Learns","textChars":6,"textLines":1,"bbox":[930.6666666666666,410,247.33333333333331,28]}
+{"kind":"textbox","slide":3,"id":"37","role":"card body: Learns","text":"Clicks, saves, purchases, and\nrepeat behavior sharpen\nrecommendations for shoppers\nwhile improving marketplace\nmerchandising.","textPreview":"Clicks, saves, purchases, and | repeat behavior sharpen | recommendations for shoppers | while improving marketplace | merchandising.","textChars":125,"textLines":5,"bbox":[866.6666666666666,474,307.3333333333333,112]}
+{"kind":"textbox","slide":3,"id":"38","role":"caption","text":"Confidential | VAIDHURYA","textPreview":"Confidential | VAIDHURYA","textChars":24,"textLines":1,"bbox":[64,674,260,22]}
+{"kind":"shape","slide":4,"id":"2","role":"right band","shapeType":"rect","bbox":[896,0,384,720]}
+{"kind":"shape","slide":4,"id":"3","role":"left glow","shapeType":"ellipse","bbox":[-140,470,360,300]}
+{"kind":"shape","slide":4,"id":"4","role":"right glow","shapeType":"ellipse","bbox":[1010,-90,320,260]}
+{"kind":"shape","slide":4,"id":"5","role":"photo frame","shapeType":"roundRect","bbox":[908,86,284,212]}
+{"kind":"shape","slide":4,"id":"6","role":"photo accent","shapeType":"rect","bbox":[908,86,8,212]}
+{"kind":"image","slide":4,"id":"7","role":"photo panel","path":"/Users/dpvenkatesh/Desktop/vaidhurya/public/category-chains-and-pendants.png","bbox":[916,94,268,196]}
+{"kind":"textbox","slide":4,"id":"8","role":"header","text":"PRODUCT OVERVIEW","textPreview":"PRODUCT OVERVIEW","textChars":16,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":4,"id":"9","role":"header","text":"04 / 09","textPreview":"04 / 09","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":4,"id":"10","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":4,"id":"11","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":4,"id":"12","role":"title","text":"Full-Stack Product Experience","textPreview":"Full-Stack Product Experience","textChars":29,"textLines":1,"bbox":[64,86,760,142]}
+{"kind":"textbox","slide":4,"id":"13","role":"subtitle","text":"VAIDHURYA connects premium storefront design, multi-seller commerce, and AI styling in one buyer journey.","textPreview":"VAIDHURYA connects premium storefront design, multi-seller commerce, and AI styling in one buyer journey.","textChars":105,"textLines":1,"bbox":[66,234,720,70]}
+{"kind":"shape","slide":4,"id":"14","role":"card panel: Seller Onboarding","shapeType":"roundRect","bbox":[84,388,355.3333333333333,220]}
+{"kind":"shape","slide":4,"id":"15","role":"card accent: Seller Onboarding","shapeType":"rect","bbox":[84,388,8,220]}
+{"kind":"shape","slide":4,"id":"16","role":"icon badge","shapeType":"ellipse","bbox":[106,412,54,54]}
+{"kind":"shape","slide":4,"id":"17","role":"icon glyph","shapeType":"rect","bbox":[122,441,6,12]}
+{"kind":"shape","slide":4,"id":"18","role":"icon glyph","shapeType":"rect","bbox":[131,433,6,20]}
+{"kind":"shape","slide":4,"id":"19","role":"icon glyph","shapeType":"rect","bbox":[140,426,6,27]}
+{"kind":"textbox","slide":4,"id":"20","role":"card label","text":"Seller Onboarding","textPreview":"Seller Onboarding","textChars":17,"textLines":1,"bbox":[172,410,247.33333333333331,28]}
+{"kind":"textbox","slide":4,"id":"21","role":"card body: Seller Onboarding","text":"Sellers register, manage\nlistings, and showcase metal,\ndiamond, and gemstone\ncollections with trust-rich\nproduct detail.","textPreview":"Sellers register, manage | listings, and showcase metal, | diamond, and gemstone | collections with trust-rich | product detail.","textChars":120,"textLines":5,"bbox":[108,474,307.3333333333333,112]}
+{"kind":"shape","slide":4,"id":"22","role":"card panel: Buyer Discovery","shapeType":"roundRect","bbox":[463.3333333333333,388,355.3333333333333,220]}
+{"kind":"shape","slide":4,"id":"23","role":"card accent: Buyer Discovery","shapeType":"rect","bbox":[463.3333333333333,388,8,220]}
+{"kind":"shape","slide":4,"id":"24","role":"icon badge","shapeType":"ellipse","bbox":[485.3333333333333,412,54,54]}
+{"kind":"shape","slide":4,"id":"25","role":"icon glyph","shapeType":"ellipse","bbox":[498.3333333333333,430,10,10]}
+{"kind":"shape","slide":4,"id":"26","role":"icon glyph","shapeType":"ellipse","bbox":[516.3333333333333,439,10,10]}
+{"kind":"shape","slide":4,"id":"27","role":"icon glyph","shapeType":"rect","bbox":[507.3333333333333,437,19,3]}
+{"kind":"textbox","slide":4,"id":"28","role":"card label","text":"Buyer Discovery","textPreview":"Buyer Discovery","textChars":15,"textLines":1,"bbox":[551.3333333333333,410,247.33333333333331,28]}
+{"kind":"textbox","slide":4,"id":"29","role":"card body: Buyer Discovery","text":"Customers browse by category,\noccasion, material, style, and\nbudget while discovering\ncertified, premium presentation.","textPreview":"Customers browse by category, | occasion, material, style, and | budget while discovering | certified, premium presentation.","textChars":118,"textLines":4,"bbox":[487.3333333333333,474,307.3333333333333,112]}
+{"kind":"shape","slide":4,"id":"30","role":"card panel: AI Styling Flow","shapeType":"roundRect","bbox":[842.6666666666666,388,355.3333333333333,220]}
+{"kind":"shape","slide":4,"id":"31","role":"card accent: AI Styling Flow","shapeType":"rect","bbox":[842.6666666666666,388,8,220]}
+{"kind":"shape","slide":4,"id":"32","role":"icon badge","shapeType":"ellipse","bbox":[864.6666666666666,412,54,54]}
+{"kind":"shape","slide":4,"id":"33","role":"icon glyph","shapeType":"roundRect","bbox":[877.6666666666666,427,26,13]}
+{"kind":"shape","slide":4,"id":"34","role":"icon glyph","shapeType":"roundRect","bbox":[882.6666666666666,436,26,13]}
+{"kind":"shape","slide":4,"id":"35","role":"icon glyph","shapeType":"roundRect","bbox":[887.6666666666666,445,20,10]}
+{"kind":"textbox","slide":4,"id":"36","role":"card label","text":"AI Styling Flow","textPreview":"AI Styling Flow","textChars":15,"textLines":1,"bbox":[930.6666666666666,410,247.33333333333331,28]}
+{"kind":"textbox","slide":4,"id":"37","role":"card body: AI Styling Flow","text":"Upload a dress photo, receive\ncurated recommendations, compare\noptions, and move into cart,\ncheckout, and order tracking.","textPreview":"Upload a dress photo, receive | curated recommendations, compare | options, and move into cart, | checkout, and order tracking.","textChars":121,"textLines":4,"bbox":[866.6666666666666,474,307.3333333333333,112]}
+{"kind":"textbox","slide":4,"id":"38","role":"caption","text":"Confidential | VAIDHURYA","textPreview":"Confidential | VAIDHURYA","textChars":24,"textLines":1,"bbox":[64,674,260,22]}
+{"kind":"shape","slide":5,"id":"2","role":"right band","shapeType":"rect","bbox":[896,0,384,720]}
+{"kind":"shape","slide":5,"id":"3","role":"left glow","shapeType":"ellipse","bbox":[-140,470,360,300]}
+{"kind":"shape","slide":5,"id":"4","role":"right glow","shapeType":"ellipse","bbox":[1010,-90,320,260]}
+{"kind":"shape","slide":5,"id":"5","role":"photo frame","shapeType":"roundRect","bbox":[934,86,258,200]}
+{"kind":"shape","slide":5,"id":"6","role":"photo accent","shapeType":"rect","bbox":[934,86,8,200]}
+{"kind":"image","slide":5,"id":"7","role":"photo panel","path":"/Users/dpvenkatesh/Desktop/vaidhurya/public/category-for-her.png","bbox":[942,94,242,184]}
+{"kind":"textbox","slide":5,"id":"8","role":"header","text":"TRACTION","textPreview":"TRACTION","textChars":8,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":5,"id":"9","role":"header","text":"05 / 09","textPreview":"05 / 09","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":5,"id":"10","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":5,"id":"11","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":5,"id":"12","role":"title","text":"Current Traction and Readiness","textPreview":"Current Traction and Readiness","textChars":30,"textLines":1,"bbox":[64,86,700,142]}
+{"kind":"textbox","slide":5,"id":"13","role":"subtitle","text":"The company is positioned as an early-stage build with a clear product thesis and fundraising-ready narrative.","textPreview":"The company is positioned as an early-stage build with a clear product thesis and fundraising-ready narrative.","textChars":110,"textLines":1,"bbox":[66,234,700,70]}
+{"kind":"shape","slide":5,"id":"14","role":"metric panel: Product concept and premium commerce foundation are already defined.","shapeType":"roundRect","bbox":[92,408,330,184]}
+{"kind":"shape","slide":5,"id":"15","role":"metric accent: Product concept and premium commerce foundation are already defined.","shapeType":"rect","bbox":[92,408,330,7]}
+{"kind":"textbox","slide":5,"id":"16","role":"metric value","text":"MVP","textPreview":"MVP","textChars":3,"textLines":1,"bbox":[114,432,286,54]}
+{"kind":"textbox","slide":5,"id":"17","role":"metric label","text":"Product concept and premium commerce foundation are already defined.","textPreview":"Product concept and premium commerce foundation are already defined.","textChars":68,"textLines":1,"bbox":[116,490,282,38]}
+{"kind":"textbox","slide":5,"id":"18","role":"metric note","text":"Product readiness","textPreview":"Product readiness","textChars":17,"textLines":1,"bbox":[116,550,282,22]}
+{"kind":"shape","slide":5,"id":"19","role":"metric panel: Validation is focused on seller onboarding, buyer experience, and styling fit.","shapeType":"roundRect","bbox":[462,408,330,184]}
+{"kind":"shape","slide":5,"id":"20","role":"metric accent: Validation is focused on seller onboarding, buyer experience, and styling fit.","shapeType":"rect","bbox":[462,408,330,7]}
+{"kind":"textbox","slide":5,"id":"21","role":"metric value","text":"EARLY","textPreview":"EARLY","textChars":5,"textLines":1,"bbox":[484,432,286,54]}
+{"kind":"textbox","slide":5,"id":"22","role":"metric label","text":"Validation is focused on seller onboarding, buyer experience, and styling fit.","textPreview":"Validation is focused on seller onboarding, buyer experience, and styling fit.","textChars":78,"textLines":1,"bbox":[486,490,282,38]}
+{"kind":"textbox","slide":5,"id":"23","role":"metric note","text":"Validation stage","textPreview":"Validation stage","textChars":16,"textLines":1,"bbox":[486,550,282,22]}
+{"kind":"shape","slide":5,"id":"24","role":"metric panel: Investor outreach can center on product clarity, AI differentiation, and category timing.","shapeType":"roundRect","bbox":[832,408,330,184]}
+{"kind":"shape","slide":5,"id":"25","role":"metric accent: Investor outreach can center on product clarity, AI differentiation, and category timing.","shapeType":"rect","bbox":[832,408,330,7]}
+{"kind":"textbox","slide":5,"id":"26","role":"metric value","text":"READY","textPreview":"READY","textChars":5,"textLines":1,"bbox":[854,432,286,54]}
+{"kind":"textbox","slide":5,"id":"27","role":"metric label","text":"Investor outreach can center on product clarity, AI differentiation, and category timing.","textPreview":"Investor outreach can center on product clarity, AI differentiation, and category timing.","textChars":89,"textLines":1,"bbox":[856,490,282,38]}
+{"kind":"textbox","slide":5,"id":"28","role":"metric note","text":"Investor readiness","textPreview":"Investor readiness","textChars":18,"textLines":1,"bbox":[856,550,282,22]}
+{"kind":"textbox","slide":5,"id":"29","role":"caption","text":"Confidential | VAIDHURYA","textPreview":"Confidential | VAIDHURYA","textChars":24,"textLines":1,"bbox":[64,674,260,22]}
+{"kind":"shape","slide":6,"id":"2","role":"right band","shapeType":"rect","bbox":[896,0,384,720]}
+{"kind":"shape","slide":6,"id":"3","role":"left glow","shapeType":"ellipse","bbox":[-140,470,360,300]}
+{"kind":"shape","slide":6,"id":"4","role":"right glow","shapeType":"ellipse","bbox":[1010,-90,320,260]}
+{"kind":"shape","slide":6,"id":"5","role":"photo frame","shapeType":"roundRect","bbox":[908,86,284,212]}
+{"kind":"shape","slide":6,"id":"6","role":"photo accent","shapeType":"rect","bbox":[908,86,8,212]}
+{"kind":"image","slide":6,"id":"7","role":"photo panel","path":"/Users/dpvenkatesh/Desktop/vaidhurya/public/bridal-piece-2.png","bbox":[916,94,268,196]}
+{"kind":"textbox","slide":6,"id":"8","role":"header","text":"TEAM","textPreview":"TEAM","textChars":4,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":6,"id":"9","role":"header","text":"06 / 09","textPreview":"06 / 09","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":6,"id":"10","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":6,"id":"11","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":6,"id":"12","role":"title","text":"Built by Founders Focused on Premium Commerce","textPreview":"Built by Founders Focused on Premium Commerce","textChars":45,"textLines":1,"bbox":[64,86,760,142]}
+{"kind":"textbox","slide":6,"id":"13","role":"subtitle","text":"The founding team is shaping VAIDHURYA at the intersection of jewelry commerce, AI-led personalization, and marketplace execution.","textPreview":"The founding team is shaping VAIDHURYA at the intersection of jewelry commerce, AI-led personalization, and marketplace execution.","textChars":130,"textLines":1,"bbox":[66,234,720,70]}
+{"kind":"shape","slide":6,"id":"14","role":"card panel: Venkatesha DP","shapeType":"roundRect","bbox":[84,388,355.3333333333333,220]}
+{"kind":"shape","slide":6,"id":"15","role":"card accent: Venkatesha DP","shapeType":"rect","bbox":[84,388,8,220]}
+{"kind":"shape","slide":6,"id":"16","role":"icon badge","shapeType":"ellipse","bbox":[106,412,54,54]}
+{"kind":"shape","slide":6,"id":"17","role":"icon glyph","shapeType":"rect","bbox":[122,441,6,12]}
+{"kind":"shape","slide":6,"id":"18","role":"icon glyph","shapeType":"rect","bbox":[131,433,6,20]}
+{"kind":"shape","slide":6,"id":"19","role":"icon glyph","shapeType":"rect","bbox":[140,426,6,27]}
+{"kind":"textbox","slide":6,"id":"20","role":"card label","text":"Venkatesha DP","textPreview":"Venkatesha DP","textChars":13,"textLines":1,"bbox":[172,410,247.33333333333331,28]}
+{"kind":"textbox","slide":6,"id":"21","role":"card body: Venkatesha DP","text":"Co-founder driving product\nvision, marketplace execution,\nand the customer experience\nneeded to modernize jewelry\nbuying in India.","textPreview":"Co-founder driving product | vision, marketplace execution, | and the customer experience | needed to modernize jewelry | buying in India.","textChars":130,"textLines":5,"bbox":[108,474,307.3333333333333,112]}
+{"kind":"shape","slide":6,"id":"22","role":"card panel: Rishitha Adari","shapeType":"roundRect","bbox":[463.3333333333333,388,355.3333333333333,220]}
+{"kind":"shape","slide":6,"id":"23","role":"card accent: Rishitha Adari","shapeType":"rect","bbox":[463.3333333333333,388,8,220]}
+{"kind":"shape","slide":6,"id":"24","role":"icon badge","shapeType":"ellipse","bbox":[485.3333333333333,412,54,54]}
+{"kind":"shape","slide":6,"id":"25","role":"icon glyph","shapeType":"ellipse","bbox":[498.3333333333333,430,10,10]}
+{"kind":"shape","slide":6,"id":"26","role":"icon glyph","shapeType":"ellipse","bbox":[516.3333333333333,439,10,10]}
+{"kind":"shape","slide":6,"id":"27","role":"icon glyph","shapeType":"rect","bbox":[507.3333333333333,437,19,3]}
+{"kind":"textbox","slide":6,"id":"28","role":"card label","text":"Rishitha Adari","textPreview":"Rishitha Adari","textChars":14,"textLines":1,"bbox":[551.3333333333333,410,247.33333333333331,28]}
+{"kind":"textbox","slide":6,"id":"29","role":"card body: Rishitha Adari","text":"Co-founder shaping brand\ndirection, business build-out,\nand the premium trust layer\nneeded to attract sellers and\nshoppers.","textPreview":"Co-founder shaping brand | direction, business build-out, | and the premium trust layer | needed to attract sellers and | shoppers.","textChars":123,"textLines":5,"bbox":[487.3333333333333,474,307.3333333333333,112]}
+{"kind":"shape","slide":6,"id":"30","role":"card panel: Why This Team","shapeType":"roundRect","bbox":[842.6666666666666,388,355.3333333333333,220]}
+{"kind":"shape","slide":6,"id":"31","role":"card accent: Why This Team","shapeType":"rect","bbox":[842.6666666666666,388,8,220]}
+{"kind":"shape","slide":6,"id":"32","role":"icon badge","shapeType":"ellipse","bbox":[864.6666666666666,412,54,54]}
+{"kind":"shape","slide":6,"id":"33","role":"icon glyph","shapeType":"roundRect","bbox":[877.6666666666666,427,26,13]}
+{"kind":"shape","slide":6,"id":"34","role":"icon glyph","shapeType":"roundRect","bbox":[882.6666666666666,436,26,13]}
+{"kind":"shape","slide":6,"id":"35","role":"icon glyph","shapeType":"roundRect","bbox":[887.6666666666666,445,20,10]}
+{"kind":"textbox","slide":6,"id":"36","role":"card label","text":"Why This Team","textPreview":"Why This Team","textChars":13,"textLines":1,"bbox":[930.6666666666666,410,247.33333333333331,28]}
+{"kind":"textbox","slide":6,"id":"37","role":"card body: Why This Team","text":"Execution-first founders\nbuilding a trusted commerce\nbrand with AI-native\npersonalization as the product\ndifferentiator.","textPreview":"Execution-first founders | building a trusted commerce | brand with AI-native | personalization as the product | differentiator.","textChars":120,"textLines":5,"bbox":[866.6666666666666,474,307.3333333333333,112]}
+{"kind":"textbox","slide":6,"id":"38","role":"caption","text":"Confidential | VAIDHURYA","textPreview":"Confidential | VAIDHURYA","textChars":24,"textLines":1,"bbox":[64,674,260,22]}
+{"kind":"shape","slide":7,"id":"2","role":"right band","shapeType":"rect","bbox":[896,0,384,720]}
+{"kind":"shape","slide":7,"id":"3","role":"left glow","shapeType":"ellipse","bbox":[-140,470,360,300]}
+{"kind":"shape","slide":7,"id":"4","role":"right glow","shapeType":"ellipse","bbox":[1010,-90,320,260]}
+{"kind":"shape","slide":7,"id":"5","role":"photo frame","shapeType":"roundRect","bbox":[908,86,284,212]}
+{"kind":"shape","slide":7,"id":"6","role":"photo accent","shapeType":"rect","bbox":[908,86,8,212]}
+{"kind":"image","slide":7,"id":"7","role":"photo panel","path":"/Users/dpvenkatesh/Desktop/vaidhurya/public/victorian-polki-secondary.png","bbox":[916,94,268,196]}
+{"kind":"textbox","slide":7,"id":"8","role":"header","text":"BUSINESS MODEL","textPreview":"BUSINESS MODEL","textChars":14,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":7,"id":"9","role":"header","text":"07 / 09","textPreview":"07 / 09","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":7,"id":"10","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":7,"id":"11","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":7,"id":"12","role":"title","text":"Multiple Monetization Layers","textPreview":"Multiple Monetization Layers","textChars":28,"textLines":1,"bbox":[64,86,760,142]}
+{"kind":"textbox","slide":7,"id":"13","role":"subtitle","text":"VAIDHURYA is structured to capture transaction revenue, recurring seller revenue, and platform service upside.","textPreview":"VAIDHURYA is structured to capture transaction revenue, recurring seller revenue, and platform service upside.","textChars":110,"textLines":1,"bbox":[66,234,720,70]}
+{"kind":"shape","slide":7,"id":"14","role":"card panel: Marketplace Take Rate","shapeType":"roundRect","bbox":[84,388,355.3333333333333,220]}
+{"kind":"shape","slide":7,"id":"15","role":"card accent: Marketplace Take Rate","shapeType":"rect","bbox":[84,388,8,220]}
+{"kind":"shape","slide":7,"id":"16","role":"icon badge","shapeType":"ellipse","bbox":[106,412,54,54]}
+{"kind":"shape","slide":7,"id":"17","role":"icon glyph","shapeType":"rect","bbox":[122,441,6,12]}
+{"kind":"shape","slide":7,"id":"18","role":"icon glyph","shapeType":"rect","bbox":[131,433,6,20]}
+{"kind":"shape","slide":7,"id":"19","role":"icon glyph","shapeType":"rect","bbox":[140,426,6,27]}
+{"kind":"textbox","slide":7,"id":"20","role":"card label","text":"Marketplace Take Rate","textPreview":"Marketplace Take Rate","textChars":21,"textLines":1,"bbox":[172,410,247.33333333333331,28]}
+{"kind":"textbox","slide":7,"id":"21","role":"card body: Marketplace Take Rate","text":"Commission on every completed\ntransaction across metal,\ndiamond, and gemstone jewelry\nsold on the platform.","textPreview":"Commission on every completed | transaction across metal, | diamond, and gemstone jewelry | sold on the platform.","textChars":107,"textLines":4,"bbox":[108,474,307.3333333333333,112]}
+{"kind":"shape","slide":7,"id":"22","role":"card panel: Seller Revenue","shapeType":"roundRect","bbox":[463.3333333333333,388,355.3333333333333,220]}
+{"kind":"shape","slide":7,"id":"23","role":"card accent: Seller Revenue","shapeType":"rect","bbox":[463.3333333333333,388,8,220]}
+{"kind":"shape","slide":7,"id":"24","role":"icon badge","shapeType":"ellipse","bbox":[485.3333333333333,412,54,54]}
+{"kind":"shape","slide":7,"id":"25","role":"icon glyph","shapeType":"ellipse","bbox":[498.3333333333333,430,10,10]}
+{"kind":"shape","slide":7,"id":"26","role":"icon glyph","shapeType":"ellipse","bbox":[516.3333333333333,439,10,10]}
+{"kind":"shape","slide":7,"id":"27","role":"icon glyph","shapeType":"rect","bbox":[507.3333333333333,437,19,3]}
+{"kind":"textbox","slide":7,"id":"28","role":"card label","text":"Seller Revenue","textPreview":"Seller Revenue","textChars":14,"textLines":1,"bbox":[551.3333333333333,410,247.33333333333331,28]}
+{"kind":"textbox","slide":7,"id":"29","role":"card body: Seller Revenue","text":"Premium storefront plans,\nmerchandising tools, and\noptional visibility boosts\ncreate recurring platform\nrevenue.","textPreview":"Premium storefront plans, | merchandising tools, and | optional visibility boosts | create recurring platform | revenue.","textChars":112,"textLines":5,"bbox":[487.3333333333333,474,307.3333333333333,112]}
+{"kind":"shape","slide":7,"id":"30","role":"card panel: Value-Added Services","shapeType":"roundRect","bbox":[842.6666666666666,388,355.3333333333333,220]}
+{"kind":"shape","slide":7,"id":"31","role":"card accent: Value-Added Services","shapeType":"rect","bbox":[842.6666666666666,388,8,220]}
+{"kind":"shape","slide":7,"id":"32","role":"icon badge","shapeType":"ellipse","bbox":[864.6666666666666,412,54,54]}
+{"kind":"shape","slide":7,"id":"33","role":"icon glyph","shapeType":"roundRect","bbox":[877.6666666666666,427,26,13]}
+{"kind":"shape","slide":7,"id":"34","role":"icon glyph","shapeType":"roundRect","bbox":[882.6666666666666,436,26,13]}
+{"kind":"shape","slide":7,"id":"35","role":"icon glyph","shapeType":"roundRect","bbox":[887.6666666666666,445,20,10]}
+{"kind":"textbox","slide":7,"id":"36","role":"card label","text":"Value-Added Services","textPreview":"Value-Added Services","textChars":20,"textLines":1,"bbox":[930.6666666666666,410,247.33333333333331,28]}
+{"kind":"textbox","slide":7,"id":"37","role":"card body: Value-Added Services","text":"Catalog support, certification\nassistance, content creation,\nand future logistics enablement\ndeepen monetization over time.","textPreview":"Catalog support, certification | assistance, content creation, | and future logistics enablement | deepen monetization over time.","textChars":123,"textLines":4,"bbox":[866.6666666666666,474,307.3333333333333,112]}
+{"kind":"textbox","slide":7,"id":"38","role":"caption","text":"Confidential | VAIDHURYA","textPreview":"Confidential | VAIDHURYA","textChars":24,"textLines":1,"bbox":[64,674,260,22]}
+{"kind":"shape","slide":8,"id":"2","role":"right band","shapeType":"rect","bbox":[896,0,384,720]}
+{"kind":"shape","slide":8,"id":"3","role":"left glow","shapeType":"ellipse","bbox":[-140,470,360,300]}
+{"kind":"shape","slide":8,"id":"4","role":"right glow","shapeType":"ellipse","bbox":[1010,-90,320,260]}
+{"kind":"shape","slide":8,"id":"5","role":"photo frame","shapeType":"roundRect","bbox":[908,86,284,212]}
+{"kind":"shape","slide":8,"id":"6","role":"photo accent","shapeType":"rect","bbox":[908,86,8,212]}
+{"kind":"image","slide":8,"id":"7","role":"photo panel","path":"/Users/dpvenkatesh/Desktop/vaidhurya/public/category-brides-collection.png","bbox":[916,94,268,196]}
+{"kind":"textbox","slide":8,"id":"8","role":"header","text":"TECH STACK","textPreview":"TECH STACK","textChars":10,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":8,"id":"9","role":"header","text":"08 / 09","textPreview":"08 / 09","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":8,"id":"10","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":8,"id":"11","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":8,"id":"12","role":"title","text":"Built for Scale with Claude and AWS","textPreview":"Built for Scale with Claude and AWS","textChars":35,"textLines":1,"bbox":[64,86,760,142]}
+{"kind":"textbox","slide":8,"id":"13","role":"subtitle","text":"The platform combines premium commerce infrastructure with an AI layer designed for personalization and operational leverage.","textPreview":"The platform combines premium commerce infrastructure with an AI layer designed for personalization and operational leverage.","textChars":125,"textLines":1,"bbox":[66,234,720,70]}
+{"kind":"shape","slide":8,"id":"14","role":"card panel: Commerce Core","shapeType":"roundRect","bbox":[84,388,355.3333333333333,220]}
+{"kind":"shape","slide":8,"id":"15","role":"card accent: Commerce Core","shapeType":"rect","bbox":[84,388,8,220]}
+{"kind":"shape","slide":8,"id":"16","role":"icon badge","shapeType":"ellipse","bbox":[106,412,54,54]}
+{"kind":"shape","slide":8,"id":"17","role":"icon glyph","shapeType":"rect","bbox":[122,441,6,12]}
+{"kind":"shape","slide":8,"id":"18","role":"icon glyph","shapeType":"rect","bbox":[131,433,6,20]}
+{"kind":"shape","slide":8,"id":"19","role":"icon glyph","shapeType":"rect","bbox":[140,426,6,27]}
+{"kind":"textbox","slide":8,"id":"20","role":"card label","text":"Commerce Core","textPreview":"Commerce Core","textChars":13,"textLines":1,"bbox":[172,410,247.33333333333331,28]}
+{"kind":"textbox","slide":8,"id":"21","role":"card body: Commerce Core","text":"Next.js and React power a\npremium storefront, seller\nworkflows, cart, checkout,\ntracking, and content-managed\nmerchandising.","textPreview":"Next.js and React power a | premium storefront, seller | workflows, cart, checkout, | tracking, and content-managed | merchandising.","textChars":124,"textLines":5,"bbox":[108,474,307.3333333333333,112]}
+{"kind":"shape","slide":8,"id":"22","role":"card panel: Claude + AI","shapeType":"roundRect","bbox":[463.3333333333333,388,355.3333333333333,220]}
+{"kind":"shape","slide":8,"id":"23","role":"card accent: Claude + AI","shapeType":"rect","bbox":[463.3333333333333,388,8,220]}
+{"kind":"shape","slide":8,"id":"24","role":"icon badge","shapeType":"ellipse","bbox":[485.3333333333333,412,54,54]}
+{"kind":"shape","slide":8,"id":"25","role":"icon glyph","shapeType":"ellipse","bbox":[498.3333333333333,430,10,10]}
+{"kind":"shape","slide":8,"id":"26","role":"icon glyph","shapeType":"ellipse","bbox":[516.3333333333333,439,10,10]}
+{"kind":"shape","slide":8,"id":"27","role":"icon glyph","shapeType":"rect","bbox":[507.3333333333333,437,19,3]}
+{"kind":"textbox","slide":8,"id":"28","role":"card label","text":"Claude + AI","textPreview":"Claude + AI","textChars":11,"textLines":1,"bbox":[551.3333333333333,410,247.33333333333331,28]}
+{"kind":"textbox","slide":8,"id":"29","role":"card body: Claude + AI","text":"Claude is planned for catalog\nenrichment, listing assistance,\nstyle reasoning, and support\nworkflows around\npersonalization.","textPreview":"Claude is planned for catalog | enrichment, listing assistance, | style reasoning, and support | workflows around | personalization.","textChars":124,"textLines":5,"bbox":[487.3333333333333,474,307.3333333333333,112]}
+{"kind":"shape","slide":8,"id":"30","role":"card panel: AWS Backbone","shapeType":"roundRect","bbox":[842.6666666666666,388,355.3333333333333,220]}
+{"kind":"shape","slide":8,"id":"31","role":"card accent: AWS Backbone","shapeType":"rect","bbox":[842.6666666666666,388,8,220]}
+{"kind":"shape","slide":8,"id":"32","role":"icon badge","shapeType":"ellipse","bbox":[864.6666666666666,412,54,54]}
+{"kind":"shape","slide":8,"id":"33","role":"icon glyph","shapeType":"roundRect","bbox":[877.6666666666666,427,26,13]}
+{"kind":"shape","slide":8,"id":"34","role":"icon glyph","shapeType":"roundRect","bbox":[882.6666666666666,436,26,13]}
+{"kind":"shape","slide":8,"id":"35","role":"icon glyph","shapeType":"roundRect","bbox":[887.6666666666666,445,20,10]}
+{"kind":"textbox","slide":8,"id":"36","role":"card label","text":"AWS Backbone","textPreview":"AWS Backbone","textChars":12,"textLines":1,"bbox":[930.6666666666666,410,247.33333333333331,28]}
+{"kind":"textbox","slide":8,"id":"37","role":"card body: AWS Backbone","text":"AWS supports storage, compute,\nscalability, and orchestration\nfor uploads, media,\nrecommendation flows, and\nplatform operations.","textPreview":"AWS supports storage, compute, | scalability, and orchestration | for uploads, media, | recommendation flows, and | platform operations.","textChars":128,"textLines":5,"bbox":[866.6666666666666,474,307.3333333333333,112]}
+{"kind":"textbox","slide":8,"id":"38","role":"caption","text":"Confidential | VAIDHURYA","textPreview":"Confidential | VAIDHURYA","textChars":24,"textLines":1,"bbox":[64,674,260,22]}
+{"kind":"shape","slide":9,"id":"2","role":"right band","shapeType":"rect","bbox":[896,0,384,720]}
+{"kind":"shape","slide":9,"id":"3","role":"left glow","shapeType":"ellipse","bbox":[-140,470,360,300]}
+{"kind":"shape","slide":9,"id":"4","role":"right glow","shapeType":"ellipse","bbox":[1010,-90,320,260]}
+{"kind":"shape","slide":9,"id":"5","role":"photo frame","shapeType":"roundRect","bbox":[934,86,258,200]}
+{"kind":"shape","slide":9,"id":"6","role":"photo accent","shapeType":"rect","bbox":[934,86,8,200]}
+{"kind":"image","slide":9,"id":"7","role":"photo panel","path":"/Users/dpvenkatesh/Desktop/vaidhurya/public/bridal-piece-4.jpeg","bbox":[942,94,242,184]}
+{"kind":"textbox","slide":9,"id":"8","role":"header","text":"FUNDRAISING","textPreview":"FUNDRAISING","textChars":11,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":9,"id":"9","role":"header","text":"09 / 09","textPreview":"09 / 09","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":9,"id":"10","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":9,"id":"11","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":9,"id":"12","role":"title","text":"Fundraising Status","textPreview":"Fundraising Status","textChars":18,"textLines":1,"bbox":[64,86,700,142]}
+{"kind":"textbox","slide":9,"id":"13","role":"subtitle","text":"Capital will accelerate product development, AI recommendations, seller acquisition, and marketplace launch readiness.","textPreview":"Capital will accelerate product development, AI recommendations, seller acquisition, and marketplace launch readiness.","textChars":118,"textLines":1,"bbox":[66,234,700,70]}
+{"kind":"shape","slide":9,"id":"14","role":"metric panel: Fundraising stage focused on building the category-defining jewelry marketplace.","shapeType":"roundRect","bbox":[92,408,330,184]}
+{"kind":"shape","slide":9,"id":"15","role":"metric accent: Fundraising stage focused on building the category-defining jewelry marketplace.","shapeType":"rect","bbox":[92,408,330,7]}
+{"kind":"textbox","slide":9,"id":"16","role":"metric value","text":"PRE-SEED","textPreview":"PRE-SEED","textChars":8,"textLines":1,"bbox":[114,432,286,54]}
+{"kind":"textbox","slide":9,"id":"17","role":"metric label","text":"Fundraising stage focused on building the category-defining jewelry marketplace.","textPreview":"Fundraising stage focused on building the category-defining jewelry marketplace.","textChars":80,"textLines":1,"bbox":[116,490,282,38]}
+{"kind":"textbox","slide":9,"id":"18","role":"metric note","text":"Open investor conversations","textPreview":"Open investor conversations","textChars":27,"textLines":1,"bbox":[116,550,282,22]}
+{"kind":"shape","slide":9,"id":"19","role":"metric panel: Primary use of funds across product, recommendation engine, seller onboarding, and customer growth.","shapeType":"roundRect","bbox":[462,408,330,184]}
+{"kind":"shape","slide":9,"id":"20","role":"metric accent: Primary use of funds across product, recommendation engine, seller onboarding, and customer growth.","shapeType":"rect","bbox":[462,408,330,7]}
+{"kind":"textbox","slide":9,"id":"21","role":"metric value","text":"AI + GTM","textPreview":"AI + GTM","textChars":8,"textLines":1,"bbox":[484,432,286,54]}
+{"kind":"textbox","slide":9,"id":"22","role":"metric label","text":"Primary use of funds across product, recommendation engine, seller onboarding, and customer growth.","textPreview":"Primary use of funds across product, recommendation engine, seller onboarding, and customer growth.","textChars":99,"textLines":1,"bbox":[486,490,282,38]}
+{"kind":"textbox","slide":9,"id":"23","role":"metric note","text":"Use of funds","textPreview":"Use of funds","textChars":12,"textLines":1,"bbox":[486,550,282,22]}
+{"kind":"shape","slide":9,"id":"24","role":"metric panel: Next milestone: launch with live sellers and an outfit-led recommendation experience.","shapeType":"roundRect","bbox":[832,408,330,184]}
+{"kind":"shape","slide":9,"id":"25","role":"metric accent: Next milestone: launch with live sellers and an outfit-led recommendation experience.","shapeType":"rect","bbox":[832,408,330,7]}
+{"kind":"textbox","slide":9,"id":"26","role":"metric value","text":"V1 LAUNCH","textPreview":"V1 LAUNCH","textChars":9,"textLines":1,"bbox":[854,432,286,54]}
+{"kind":"textbox","slide":9,"id":"27","role":"metric label","text":"Next milestone: launch with live sellers and an outfit-led recommendation experience.","textPreview":"Next milestone: launch with live sellers and an outfit-led recommendation experience.","textChars":85,"textLines":1,"bbox":[856,490,282,38]}
+{"kind":"textbox","slide":9,"id":"28","role":"metric note","text":"Execution milestone","textPreview":"Execution milestone","textChars":19,"textLines":1,"bbox":[856,550,282,22]}
+{"kind":"textbox","slide":9,"id":"29","role":"caption","text":"Confidential | VAIDHURYA","textPreview":"Confidential | VAIDHURYA","textChars":24,"textLines":1,"bbox":[64,674,260,22]}

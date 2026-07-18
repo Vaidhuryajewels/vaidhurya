@@ -6,6 +6,7 @@ import { useCart } from "@/components/cart-provider";
 import {
   computePriceForVariant,
   formatCurrency,
+  getVariantDisplayLabel,
   type Product,
 } from "@/lib/commerce-data";
 
@@ -35,7 +36,7 @@ export function ProductCard({ product }: { product: Product }) {
 
         <div className="product-card-meta">
           <span>{primaryVariant.material}</span>
-          <span>{primaryVariant.label}</span>
+          <span>{getVariantDisplayLabel(product, primaryVariant)}</span>
         </div>
 
         <div className="product-card-footer">

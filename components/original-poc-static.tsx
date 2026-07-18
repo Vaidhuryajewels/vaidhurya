@@ -8,6 +8,7 @@ import {
   collections,
   computePriceForVariant,
   formatCurrency,
+  getBrowsePriceOverride,
   getProductsForTheme,
   type Product,
   type ThemeKey,
@@ -289,12 +290,8 @@ function UtilityActions() {
 
 function buildPreviewFromProduct(product: Product): ProductPreview {
   const variant = product.variants[0];
-  const priceOverrides: Partial<Record<Product["slug"], string>> = {
-    "celestial-cuff-bracelet": "₹2,299",
-    "moonlit-anklet-pair": "₹3,000",
-    "dual-tone-pendant-chain": "₹2,500",
-  };
-  const price = priceOverrides[product.slug] ?? formatCurrency(computePriceForVariant(variant).subtotal);
+  const override = getBrowsePriceOverride(product.slug);
+  const price = override ? formatCurrency(override) : formatCurrency(computePriceForVariant(variant).subtotal);
   const mediaBadge = product.slug === "moonlit-anklet-pair" || product.slug === "dual-tone-pendant-chain"
     ? "Sold Out"
     : undefined;
@@ -308,7 +305,7 @@ function buildPreviewFromProduct(product: Product): ProductPreview {
     hoverImageSrc: product.hoverImageSrc,
     price,
     mediaBadge,
-    weight: `Wt: ${variant.weightGrams}gm`,
+    weight: product.theme === "everyday" ? undefined : `Wt: ${variant.weightGrams}gm`,
   };
 }
 

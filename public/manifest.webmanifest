@@ -1,0 +1,13 @@
+{
+  "name": "VAIDHURYA Seller",
+  "short_name": "VAIDHURYA",
+  "description": "Seller inbox and AI-assisted jewelry listings",
+  "start_url": "/seller",
+  "scope": "/seller",
+  "display": "standalone",
+  "background_color": "#f7efe5",
+  "theme_color": "#351027",
+  "icons": [
+    { "src": "/vaidhurya-logo.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

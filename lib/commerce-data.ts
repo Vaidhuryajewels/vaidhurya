@@ -451,7 +451,7 @@ export const products: Product[] = [
     badge: "Everyday Bestseller",
     craftsmanship: "Slim sculptural profile with lightweight premium finish.",
     shippingNote: "Ships fast with gift-note support and tracked delivery.",
-    certification: "Includes sterling silver authenticity card.",
+    certification: "Includes 925 hallmark + certificate of authenticity.",
     careNotes: [
       "Store in the anti-tarnish sleeve provided.",
       "Avoid stacking with sharp-edged cuffs.",
@@ -760,6 +760,24 @@ export function getProductsBySlugs(slugs: string[]) {
   return slugs
     .map((slug) => getProductBySlug(slug))
     .filter((product): product is Product => product !== undefined);
+}
+
+const browsePriceOverrides: Partial<Record<Product["slug"], number>> = {
+  "celestial-cuff-bracelet": 2299,
+  "moonlit-anklet-pair": 3000,
+  "dual-tone-pendant-chain": 2500,
+};
+
+export function getBrowsePriceOverride(slug: Product["slug"]) {
+  return browsePriceOverrides[slug];
+}
+
+export function getVariantDisplayLabel(product: Product, variant: ProductVariant) {
+  if (product.theme !== "everyday") {
+    return variant.label;
+  }
+
+  return variant.label.replace(/\s*\/\s*\d+\s*gm\b/i, "").trim();
 }
 
 export function computePriceForVariant(
