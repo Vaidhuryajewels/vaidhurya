@@ -14,6 +14,8 @@ This documentation set translates the current premium jewelry storefront into an
 
 ## Reading Order
 
+For business operations and automation work, start with the [Owner Interview / Business Operations Reference](./business-operations-reference.md) and [Automation Requirements and Decision Register](./business-automation-requirements.md). These preserve confirmed business intent; they do not assert production implementation or approval of proposed vendors. The Platform Roadmap remains authoritative for release scope.
+
 For most readers, this is the recommended order:
 
 1. [Architecture Overview](./architecture-overview.md)

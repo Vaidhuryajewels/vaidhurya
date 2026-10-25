@@ -2,6 +2,13 @@
 
 These instructions apply to every task in this repository.
 
+## Business Context for Future Work
+
+- Before planning or changing business operations, pricing, payments, inventory, manufacturing, shipping, messaging, invoicing, or automation, read `docs/business-operations-reference.md` and `docs/business-automation-requirements.md`.
+- These files preserve the owner interview, explicit corrections, approval requirements, and unresolved choices. Do not ask the owner to repeat confirmed answers.
+- Distinguish owner-confirmed business facts from assistant recommendations and implementation status. Consult `docs/platform-roadmap.md` for release scope and code/tests for implemented behavior; `docs/operations-automation-plan.md` contains proposals, not vendor-adoption approval.
+- If business intent conflicts with existing release scope or behavior, identify the discrepancy before implementation. Update the business references when the owner explicitly changes a rule, preserving the correction and date.
+
 ## Backlog Execution
 
 - Break large architecture work into small, meaningful problems that can be completed without losing context.
